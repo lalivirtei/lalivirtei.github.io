@@ -1,10 +1,5 @@
 img {
   width: 300px;
-  margin-left: 40px;
-}
-
-.descriptor {
-  margin-left: 40px;
 }
 
 table {
@@ -15,19 +10,20 @@ td {
   padding: 5px;
 }
 
-thead td,
+thead th,
 tfoot td,
 tbody td {
   border: 2px solid dimgray;
 }
 
-thead td,
+thead th,
 tfoot td,
 tfoot td {
   text-align: center;
 }
 
-thead tr:first-child td {
+thead tr:first-child th {
   border: none;
   padding: 0;
+  font-weight: normal;
 }
