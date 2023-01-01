@@ -1,0 +1,33 @@
+img {
+  width: 300px;
+  margin-left: 40px;
+}
+
+.descriptor {
+  margin-left: 40px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+}
+
+thead td,
+tfoot td,
+tbody td {
+  border: 2px solid dimgray;
+}
+
+thead td,
+tfoot td,
+tfoot td {
+  text-align: center;
+}
+
+thead tr:first-child td {
+  border: none;
+  padding: 0;
+}
