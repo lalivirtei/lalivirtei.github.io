@@ -41,7 +41,7 @@
 body {
   margin: 0;
   font-family: 'Gilroy', sans-serif;
-  padding-bottom: 620px;
+  padding-bottom: 420px;
   background: url("/3/img/page-bg.jpg") bottom right /100% 700px no-repeat  ;
 }
 
@@ -125,7 +125,7 @@ p {
 
 .modules-header {
   width: 1190px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   padding: 55px 15px;
 }
 
@@ -142,6 +142,14 @@ p {
   margin: 0 auto;
 }
 
+.modules-h1 {
+  margin-bottom: 80px;
+  padding-left: 30px;
+  font-size: 48px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+}
+
 .modules-cards {
   font-size: 0;
   margin-bottom: 95px;
@@ -150,35 +158,49 @@ p {
 .card {
   position: relative;
   width: 480px;
-  display: inline-block;
-  box-shadow: 0 3px 20px 0 rgba(83, 83, 83, 0.31);
-  padding-top: 180px;
-  background-position: center top;
-  background-size: 100% 175px;
-  background-repeat: no-repeat;
   min-height: 500px;
-  padding-left: 50px;
+  display: inline-block;
+  margin-bottom: 65px;
+  padding-left: 57px;
+  padding-top: 166px;
   font-size: 14px;
+  vertical-align: top;
+  box-shadow: 0 3px 20px 0 rgba(83, 83, 83, 0.31);
 }
 
-.card:nth-child(1) {
+.card-bg {
+  height: 175px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-position: center 38%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card:nth-child(1) .card-bg {
   background-image: url(/3/img/module_1-bg.jpg);
 }
 
-.card:nth-child(2) {
+.card:nth-child(2) .card-bg {
   background-image: url(/3/img/module_2-bg.jpg);
 }
 
-.card:nth-child(3) {
+.card:nth-child(3) .card-bg {
   background-image: url(/3/img/module_3-bg.jpg);
 }
 
-.card:nth-child(4) {
+.card:nth-child(4) .card-bg {
   background-image: url(/3/img/module_4-bg.jpg);
 }
 
-.card:nth-child(2n-1) {
+.card:nth-child(odd) {
   margin-right: 60px;
+}
+
+.card:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 .card-header {
@@ -186,6 +208,19 @@ p {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   color: #2f1ce4;
+  margin-bottom: 16px;
+}
+
+.card-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.card-list-item {
+  font-size: 16px;
+  font-family: "Gilroy", sans-serif;
+  line-height: 2.275;
 }
 
 .card-number {
