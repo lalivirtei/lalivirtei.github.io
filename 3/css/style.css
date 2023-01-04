@@ -89,7 +89,7 @@ a {
 }
 
 .link-back {
-  background: no-repeat left center /27px url(../img/return.png);
+  background: url(../img/return.png) left center /27px no-repeat;
   padding-left: 42px;
 }
 
