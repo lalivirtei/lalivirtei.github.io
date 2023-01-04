@@ -41,13 +41,15 @@
 body {
   margin: 0;
   font-family: 'Gilroy', sans-serif;
-  padding-bottom: 420px;
-  background: url("/3/img/page-bg.jpg") bottom right /100% 700px no-repeat  ;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+.modules-body {
+  background: url("/3/img/page-bg.jpg") bottom right /100% 700px no-repeat;
+  padding-bottom: 420px;
 }
 
 .main-content {
@@ -152,19 +154,25 @@ p {
 
 .modules-cards {
   font-size: 0;
-  margin-bottom: 95px;
+  margin: 0 0 95px;
+  padding: 0;
+  list-style: none;
 }
 
 .card {
   position: relative;
-  width: 480px;
-  min-height: 500px;
+
   display: inline-block;
+  margin-left: 0;
   margin-bottom: 65px;
   padding-left: 57px;
   padding-top: 166px;
+  width: 480px;
+  min-height: 500px;
+
   font-size: 14px;
   vertical-align: top;
+
   box-shadow: 0 3px 20px 0 rgba(83, 83, 83, 0.31);
 }
 
@@ -233,7 +241,6 @@ p {
 }
 
 .btn-more {
-  display: block;
   background-color: #fff;
   min-width: 50px;
   margin: 0 auto;
@@ -246,3 +253,12 @@ p {
   border: 3px solid #2f1ce4;
 }
 
+.btn-wrapper {
+  text-align: center;
+}
+
+.link {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  padding-left: 15px;
+}
