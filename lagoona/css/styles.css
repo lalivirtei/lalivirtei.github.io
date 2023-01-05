@@ -26,6 +26,19 @@ body {
   box-sizing: border-box;
 }
 
+.btn {
+  height: 42px;
+  padding: 0 20px;
+  font-family: 'Muller', sans-serif;
+  border: 1px solid #cc9933;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cc9933;
+}
+
 .container {
   width: 1170px;
   margin: 0 auto;
@@ -107,19 +120,6 @@ body {
   transform: translateY(-50%);
   right: 45px;
   display: inline-block;
-}
-
-.btn-call {
-  height: 42px;
-  padding: 0 20px;
-  font-family: 'Muller', sans-serif;
-  border: 1px solid #cc9933;
-  border-radius: 10px;
-  background: transparent;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  color: #cc9933;
 }
 
 .btn-call:not(:last-child) {
@@ -327,6 +327,7 @@ body {
   padding: 0;
   margin: 0 0 70px;
 }
+
 .benefits__item {
   box-sizing: border-box;
   display: inline-block;
@@ -380,4 +381,98 @@ body {
 
 .benefits__item:nth-child(8) {
   background-image: url("/lagoona/img/benefits-8.svg");
+}
+
+.accom__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accom__item {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding: 249px 45px 45px 45px;
+  width: 373px;
+  height: 440px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-right: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.accom__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.accom__item:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+.accom__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin-bottom: 32px;
+}
+
+.accom__text-top {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.accom__name {
+  margin-bottom: 15px;
+}
+
+.accom__place {
+  margin-bottom: 15px;
+}
+
+.accom__price {
+  float: left;
+}
+
+.accom__rate {
+  float: right;
+}
+
+.accom__price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.accom__price small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.accom__price strong {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.accom__name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.accom__place {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999;
 }
