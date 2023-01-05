@@ -19,3 +19,237 @@
   font-weight: 700;
 }
 
+body {
+  background: #e5e5e5;
+  padding-top: 30px;
+  font-family: 'Muller', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top__container {
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.link-phone {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #666666;
+  text-decoration: none;
+}
+
+.link-cabinet {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cc9933;
+  padding-left: 30px;
+  background: url("/lagoona/img/tab.svg") left center /24px 24px no-repeat;
+  text-decoration: none;
+}
+
+.nav__container {
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 15px;
+  padding: 28px 45px;
+  margin-bottom: 70px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.nav-ul {
+  list-style: none;
+}
+
+.nav-li {
+  display: inline-block;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #666666;
+}
+
+.nav-li:not(:last-child) {
+  margin-right: 45px;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 45px;
+  display: inline-block;
+}
+
+.btn-call {
+  height: 42px;
+  font-family: 'Muller', sans-serif;
+  border: 1px solid #cc9933;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cc9933;
+}
+
+.btn-call:not(:last-child) {
+  margin-right: 60px;
+}
+
+.h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.specs {
+  margin-bottom: 70px;
+}
+
+.darken {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+}
+
+.specs__card--small {
+  position: relative;
+  padding: 40px 45px;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 573px;
+  height: 258px;
+  box-sizing: border-box;
+  background: center center /contain no-repeat;
+}
+
+.specs__card--small:first-child {
+  background-image: url("/lagoona/img/specs-1.jpg");
+  margin-bottom: 23px;
+}
+
+.specs__card--small:last-child {
+  background-image: url("/lagoona/img/specs-2.jpg");
+}
+
+.specs__heading--small {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 23px;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+
+.specs__price--small {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-bottom: 47px;
+}
+
+.specs__more {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #F0BF5F;
+  padding-right: 15px;
+  background: url("/lagoona/img/arrow-right.svg") center right /15px 15px no-repeat;
+  text-decoration: none;
+}
+
+.specs__card--big {
+  box-sizing: border-box;
+  padding: 212px 45px 40px;
+  background: url("/lagoona/img/specs-lux.jpg") center center /contain no-repeat;
+  width: 573px;
+  height: 540px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.specs__heading--big {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.specs__price--big {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: #FFFFFF;
+  opacity: 0.8;
+  margin-bottom: 47px;
+}
+
+.about {
+  margin-bottom: 70px;
+  padding-right: 290px;
+}
+
+.about__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+}

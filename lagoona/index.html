@@ -5,16 +5,18 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Lagoona</title>
 </head>
 <body>
 <header>
-  <div class="container">
+  <div class="container top__container">
     <img src="/lagoona/img/logo.svg" alt="Логотип компании Lagoona" class="logo">
     <a href="tel:+74953225448" class="link-phone">+7 495 322-54-48</a>
     <a href="#" class="link-cabinet">Личный кабинет</a>
   </div>
-  <div class="containe container--menu">
+  <div class="container nav__container">
     <nav class="nav">
       <ul class="nav-ul">
         <li class="nav-li">О нас</li>
@@ -25,8 +27,10 @@
         <li class="nav-li">Контакты</li>
       </ul>
     </nav>
-    <button class="btn-call">Хочу тур</button>
-    <button class="btn-call">Обратный звонок</button>
+    <div class="buttons">
+      <button class="btn-call">Хочу тур</button>
+      <button class="btn-call">Обратный звонок</button>
+    </div>
   </div>
 </header>
 
@@ -36,22 +40,22 @@
       <h2 class="h2">Спецпредложения</h2>
       <div class="left">
         <div class="specs__card--small">
-          <h3 class="specs__heading">Мальдивские острова</h3>
-          <div class="specs__price">от 55 000 ₽</div>
+          <div class="darken"></div>
+          <h3 class="specs__heading--small">Мальдивские<br> острова</h3>
+          <div class="specs__price--small">от 55 000 ₽</div>
           <a href="#" class="specs__more">Подробнее</a>
         </div>
         <div class="specs__card--small">
-          <div class="specs__card--small">
-            <h3 class="specs__heading">Горящий тур на остров Крит</h3>
-            <div class="specs__price">от 30 000 ₽</div>
-            <a href="#" class="specs__more">Подробнее</a>
-          </div>
+          <div class="darken"></div>
+          <h3 class="specs__heading--small">Горящий<br> тур на остров Крит</h3>
+          <div class="specs__price--small">от 30 000 ₽</div>
+          <a href="#" class="specs__more">Подробнее</a>
         </div>
       </div>
       <div class="right">
         <div class="specs__card--big">
-          <h3 class="specs__heading">Номера категории люкс</h3>
-          <div class="specs__price">от 5 000</div>
+          <h3 class="specs__heading--big">Номера категории<br>люкс</h3>
+          <div class="specs__price--big">от 5 000</div>
           <a href="#" class="specs__more">Подробнее</a>
         </div>
       </div>
