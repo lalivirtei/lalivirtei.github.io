@@ -386,7 +386,7 @@ body {
 .accom__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 70px;
 }
 
 .accom__item {
@@ -400,7 +400,7 @@ body {
   overflow: hidden;
   margin-right: 20px;
   background: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .accom__item:nth-child(3n) {
@@ -426,11 +426,11 @@ body {
 }
 
 .accom__name {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .accom__place {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .accom__price {
@@ -475,4 +475,21 @@ body {
   font-size: 16px;
   line-height: 16px;
   color: #999999;
+}
+
+.accom__item:last-child {
+  background: url("/lagoona/img/accom-all.jpg") center /contain no-repeat;
+}
+
+.accom__all {
+  position: absolute;
+  left: 54px;
+  bottom: 27px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: #ffffff;
+  padding-right: 20px;
+  background: url("/lagoona/img/arrow-white.svg") center right /20px 20px no-repeat;
+  text-decoration: none;
 }
