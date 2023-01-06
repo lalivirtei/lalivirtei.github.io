@@ -82,27 +82,38 @@ body {
 }
 
 .nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
   background: #fff;
   border-radius: 15px;
-  padding: 28px 45px;
+  padding: 14px 45px;
   margin-bottom: 70px;
-  height: 70px;
-  vertical-align: middle;
+  min-height: 70px;
 }
 
 .nav {
-  display: inline-block;
+  flex-basis: 59.5%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 35px;
+  flex-basis: 30%;
 }
 
 .nav-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-li {
-  display: inline-block;
   padding: 0;
   font-weight: 400;
   font-size: 16px;
@@ -111,19 +122,7 @@ body {
 }
 
 .nav-li:not(:last-child) {
-  margin-right: 42px;
-}
-
-.buttons {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 45px;
-  display: inline-block;
-}
-
-.btn-call:not(:last-child) {
-  margin-right: 34px;
+  margin-right: 45px;
 }
 
 .h2 {
@@ -263,28 +262,32 @@ body {
 }
 
 .services__list {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .services__item {
-  display: inline-block;
-  max-width: 34.4%;
+  flex-basis: 34.3%;
   border-radius: 15px;
   overflow: hidden;
   padding: 190px 126px 35px 45px;
   background: #fff top center/ 100% 165px no-repeat;
 }
 
+.services__item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 22px;
+}
+
 .services__item:nth-child(1) {
   background-image: url("/lagoona/img/services-1.jpg");
-  margin-bottom: 18px;
 }
 
 .services__item:nth-child(2) {
   background-image: url("/lagoona/img/services-2.jpg");
-  margin-bottom: 18px;
 }
 
 .services__item:nth-child(3) {
@@ -293,10 +296,6 @@ body {
 
 .services__item:nth-child(4) {
   background-image: url("/lagoona/img/services-4.jpg");
-}
-
-.services__item:nth-child(odd) {
-  margin-right: 19px;
 }
 
 .services__h3 {
