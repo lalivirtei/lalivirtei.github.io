@@ -1,42 +1,42 @@
 @font-face {
-  font-family: 'Muller';
-  src: url('/lagoona/fonts/MullerRegular.woff2') format('woff2'),
-  url('/lagoona/fonts/MullerRegular.woff') format('woff');
+  font-family: "Muller";
+  src: url("/lagoona/fonts/MullerRegular.woff2") format("woff2"),
+  url("/lagoona/fonts/MullerRegular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Muller';
-  src: url('/lagoona/fonts/MullerMedium.woff2') format('woff2'),
-  url('/lagoona/fonts/MullerMedium.woff') format('woff');
+  font-family: "Muller";
+  src: url("/lagoona/fonts/MullerMedium.woff2") format("woff2"),
+  url("/lagoona/fonts/MullerMedium.woff") format("woff");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Muller';
-  src: url('/lagoona/fonts/MullerBold.woff2') format('woff2'),
-  url('/lagoona/fonts/MullerBold.woff') format('woff');
+  font-family: "Muller";
+  src: url("/lagoona/fonts/MullerBold.woff2") format("woff2"),
+  url("/lagoona/fonts/MullerBold.woff") format("woff");
   font-weight: 700;
 }
 
 body {
   background: #e5e5e5;
   padding-top: 30px;
-  font-family: 'Muller', sans-serif;
+  font-family: "Muller", sans-serif;
   box-sizing: border-box;
 }
 
 .btn {
   height: 42px;
   padding: 0 20px;
-  font-family: 'Muller', sans-serif;
-  border: 1px solid #cc9933;
+  font-family: "Muller", sans-serif;
+  border: 1px solid #c93;
   border-radius: 10px;
   background: transparent;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: #cc9933;
+  color: #c93;
 }
 
 .container {
@@ -62,7 +62,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: #666666;
+  color: #666;
   text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: #cc9933;
+  color: #c93;
   padding-left: 30px;
   background: url("/lagoona/img/tab.svg") left 0 top -5px /27px 21px no-repeat;
   text-decoration: none;
@@ -107,7 +107,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: #666666;
+  color: #666;
 }
 
 .nav-li:not(:last-child) {
@@ -131,7 +131,7 @@ body {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
-  color: #333333;
+  color: #333;
   margin-bottom: 20px;
   margin-top: 0;
 }
@@ -192,7 +192,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .specs__price--small {
@@ -201,7 +201,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 45px;
 }
 
@@ -231,7 +231,7 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 15px;
   margin-top: 0;
 }
@@ -240,7 +240,7 @@ body {
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
-  color: #ffffff;
+  color: #fff;
   opacity: 0.8;
   margin-bottom: 47px;
 }
@@ -311,14 +311,14 @@ body {
   padding-right: 20px;
   background: url("/lagoona/img/arrow-right.svg") right center/ 15px 15px no-repeat;
   text-decoration: none;
-  color: #cc9933;
+  color: #c93;
 }
 
 .services__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 200%;
-  color: #000000;
+  color: #000;
   margin: 0;
 }
 
@@ -427,25 +427,30 @@ body {
 
 .accom__name {
   margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
 }
 
 .accom__place {
   margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999;
 }
 
 .accom__price {
   float: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
 }
 
 .accom__rate {
   float: right;
-}
-
-.accom__price {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  color: #000000;
 }
 
 .accom__price small {
@@ -453,28 +458,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: #999999;
+  color: #999;
 }
 
 .accom__price strong {
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
-  color: #000000;
-}
-
-.accom__name {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  color: #000000;
-}
-
-.accom__place {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  color: #999999;
+  color: #000;
 }
 
 .accom__item:last-child {
@@ -488,7 +479,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 200%;
-  color: #ffffff;
+  color: #fff;
   padding-right: 20px;
   background: url("/lagoona/img/arrow-white.svg") center right /20px 20px no-repeat;
   text-decoration: none;
