@@ -25,6 +25,7 @@ body {
   font-family: "Muller", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 .btn {
@@ -503,6 +504,10 @@ body {
   margin-bottom: 70px;
 }
 
+.tour__h2 {
+  padding-left: 0;
+}
+
 .tour-form {
   background: #fff;
   border-radius: 15px;
@@ -514,20 +519,26 @@ body {
   justify-content: space-between;
   list-style: none;
   margin: 0;
-  padding: 32px 28px;
+  padding: 28px 28px;
 }
 
 .tour-form__label {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
   color: #000;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+}
+
+.tour__btn {
+  padding: 13px 30px;
 }
 
 .select {
+  min-width: 161px;
   border: none;
-  padding: 5px 25px 5px 0;
+  padding: 5px 36px 5px 0;
   font-size: 16px;
   line-height: 1;
   background: url("/lagoona/img/form-arrow-down.svg") right center/ 10px 6px no-repeat;
@@ -542,22 +553,15 @@ body {
 }
 
 .calendar {
+  width: 121px;
   border: none;
   font-size: 16px;
   line-height: 16px;
-  background: url("/lagoona/img/calendar.svg") right center/ 16px 16px no-repeat;
-  appearance: none;
   outline: none;
 }
 
-.calendar::-webkit-inner-spin-button,
-.calendar::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
 .number-input {
-  min-width: 121px;
+  width: 121px;
   font-size: 16px;
   line-height: 16px;
   border: none;
@@ -600,13 +604,9 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 25px 23px 0;
+  padding-bottom: 26px;
   border-bottom: 1px solid #e9e9e9;
   margin-bottom: 25px;
-}
-
-.contacts__btn {
-  /*align-self: flex-end;*/
 }
 
 .contacts-item:last-child {
@@ -614,7 +614,7 @@ body {
 }
 
 .contacts-item__head {
-  flex-basis: 35%;
+  flex-basis: 41%;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
@@ -622,31 +622,38 @@ body {
 }
 
 .contacts-item__descr {
-  flex-basis: 75%;
+  flex-basis: 65%;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.4;
 }
 
 .contacts-item__link {
   display: block;
 }
 
+.contacts__btn {
+  align-self: flex-start;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  min-height: 248px;
   border-radius: 15px;
   padding: 45px;
-  background: #333 url("/lagoona/img/footer-logo.svg") bottom -45px right 177px /254px 228px no-repeat;
+  background: #333 url("/lagoona/img/footer-logo.svg") bottom right 177px /254px 228px no-repeat;
 }
 
 .footer__info {
+  box-sizing: border-box;
   display: flex;
-  flex-basis: 35%;
+  flex: 0 1 39.5%;
   flex-direction: column;
   justify-content: space-between;
   align-self: stretch;
-  margin-right: 125px;
+  padding-right: 120px;
 }
 
 .footer__text {
@@ -656,16 +663,26 @@ body {
   margin-bottom: 15px;
 }
 
-.footer__link {
-  display: block;
-}
-
 .footer__contacts {
-  flex-basis: 35%;
+  flex: 1 1 35%;
   font-style: normal;
 }
 
+.footer__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.footer__mails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .socials__item {
+  display: block;
   width: 25px;
   height: 25px;
   background: center center/contain no-repeat;

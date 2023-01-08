@@ -269,8 +269,9 @@
         </li>
       </ul>
     </section>
+
     <section class="tour">
-      <h2 class="h2">Хочу тур</h2>
+      <h2 class="h2 tour__h2">Хочу тур</h2>
       <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="tour-form">
         <ul class="tour-form__list">
           <li class="tour-form__item">
@@ -293,7 +294,7 @@
           </li>
           <li class="tour-form__item">
             <label for="calendar" class="tour-form__label">Дата прибытия</label>
-            <input id="calendar" name="calendar" class="calendar" type="date" value="18.10.2023">
+            <input id="calendar" name="calendar" class="calendar" type="date" value="2023-10-18">
           </li>
           <li class="tour-form__item">
             <label for="nights" class="tour-form__label">Ночей</label>
@@ -304,7 +305,7 @@
             <input id="quantity" name="quantity" class="number-input" type="number" value="2">
           </li>
           <li class="tour-form__item">
-            <button class="btn" type="submit">Найти</button>
+            <button class="btn tour__btn" type="submit">Найти</button>
           </li>
         </ul>
       </form>
@@ -360,15 +361,15 @@
           <a href="tel:+74950050544" class="link footer__link">+7 495 005-05-44</a>
         </div>
         <div class="footer__mails">
-          <a href="mailto:lg.oona@mail.ru" class="link footer__link">lg.oona@mail.ru</a>
-          <a href="mailto:hotels.ln@mail.ru" class="link footer__link">hotels.ln@mail.ru</a>
+          <a href="mailto:lg.oona@mail.ru" class="link footer__link" target="_blank">lg.oona@mail.ru</a>
+          <a href="mailto:hotels.ln@mail.ru" class="link footer__link" target="_blank">hotels.ln@mail.ru</a>
         </div>
       </address>
 
       <address class="socials">
-        <div class="socials__item socials__item--owl"></div>
-        <div class="socials__item socials__item--ok"></div>
-        <div class="socials__item socials__item--vk"></div>
+        <a class="socials__item socials__item--owl" href="#" target="_blank"></a>
+        <a class="socials__item socials__item--ok" href="#" target="_blank"></a>
+        <a class="socials__item socials__item--vk" href="#" target="_blank"></a>
       </address>
     </footer>
 
