@@ -630,3 +630,57 @@ body {
 .contacts-item__link {
   display: block;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 15px;
+  padding: 45px;
+  background: #333 url("/lagoona/img/footer-logo.svg") bottom -45px right 177px /254px 228px no-repeat;
+}
+
+.footer__info {
+  display: flex;
+  flex-basis: 35%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-right: 125px;
+}
+
+.footer__text {
+  font-size: 16px;
+  line-height: 190%;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer__link {
+  display: block;
+}
+
+.footer__contacts {
+  flex-basis: 35%;
+  font-style: normal;
+}
+
+.socials__item {
+  width: 25px;
+  height: 25px;
+  background: center center/contain no-repeat;
+}
+
+.socials__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.socials__item--owl {
+  background-image: url("/lagoona/img/social-owl.svg");
+}
+.socials__item--ok {
+  background-image: url("/lagoona/img/social-ok.svg");
+}
+.socials__item--vk {
+  background-image: url("/lagoona/img/social-vk.svg");
+}
