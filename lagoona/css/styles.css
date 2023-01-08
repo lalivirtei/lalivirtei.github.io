@@ -485,18 +485,18 @@ body {
   text-decoration: none;
 }
 
-.form__wrapper {
+.tour {
   background: #e9e9e9;
   border-radius: 15px;
   padding: 45px;
 }
 
-.form {
+.tour-form {
   background: #fff;
   border-radius: 15px;
 }
 
-.form__list {
+.tour-form__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -505,7 +505,7 @@ body {
   padding: 32px 28px;
 }
 
-.form__label {
+.tour-form__label {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
@@ -556,3 +556,4 @@ body {
 .number-input::-webkit-outer-spin-button {
   opacity: 1;
 }
+

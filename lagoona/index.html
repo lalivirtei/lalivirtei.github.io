@@ -269,12 +269,12 @@
         </li>
       </ul>
     </section>
-    <div class="form__wrapper">
+    <section class="tour">
       <h2 class="h2">Хочу тур</h2>
-      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form">
-        <ul class="form__list">
-          <li class="form__item">
-            <label for="city-select" class="form__label">Город вылета</label>
+      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="tour-form">
+        <ul class="tour-form__list">
+          <li class="tour-form__item">
+            <label for="city-select" class="tour-form__label">Город вылета</label>
             <select id="city-select" name="city-select" class="select">
               <option value="saint-petersburg" class="select__option">Санкт-Петербург</option>
               <option value="saint-petersburg" class="select__option">Москва</option>
@@ -282,8 +282,8 @@
               <option value="saint-petersburg" class="select__option">Нюрмберг</option>
             </select>
           </li>
-          <li class="form__item">
-            <label for="country-select" class="form__label">Страна</label>
+          <li class="tour-form__item">
+            <label for="country-select" class="tour-form__label">Страна</label>
             <select id="country-select" name="country-select" class="select">
               <option value="saint-petersburg" class="select__option">Австралия</option>
               <option value="saint-petersburg" class="select__option">Россия</option>
@@ -291,24 +291,26 @@
               <option value="saint-petersburg" class="select__option">Швеция</option>
             </select>
           </li>
-          <li class="form__item">
-            <label for="calendar" class="form__label">Дата прибытия</label>
+          <li class="tour-form__item">
+            <label for="calendar" class="tour-form__label">Дата прибытия</label>
             <input id="calendar" name="calendar" class="calendar" type="date" value="18.10.2023">
           </li>
-          <li class="form__item">
-            <label for="nights" class="form__label">Ночей</label>
+          <li class="tour-form__item">
+            <label for="nights" class="tour-form__label">Ночей</label>
             <input id="nights" name="nights" class="number-input" type="number" value="6">
           </li>
-          <li class="form__item">
-            <label for="quantity" class="form__label">Туристы</label>
+          <li class="tour-form__item">
+            <label for="quantity" class="tour-form__label">Туристы</label>
             <input id="quantity" name="quantity" class="number-input" type="number" value="2">
           </li>
-          <li class="form__item">
+          <li class="tour-form__item">
             <button class="btn" type="submit">Найти</button>
           </li>
         </ul>
       </form>
-    </div>
+    </section>
+
+
 
   </div>
 </main>
