@@ -23,6 +23,7 @@ body {
   background: #e5e5e5;
   padding-top: 30px;
   font-family: "Muller", sans-serif;
+  font-weight: 400;
   box-sizing: border-box;
 }
 
@@ -482,4 +483,76 @@ body {
   padding-right: 20px;
   background: url("/lagoona/img/arrow-white.svg") center right /20px 20px no-repeat;
   text-decoration: none;
+}
+
+.form__wrapper {
+  background: #e9e9e9;
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.form {
+  background: #fff;
+  border-radius: 15px;
+}
+
+.form__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 32px 28px;
+}
+
+.form__label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.select {
+  border: none;
+  padding: 5px 25px 5px 0;
+  font-size: 16px;
+  line-height: 1;
+  background: url("/lagoona/img/form-arrow-down.svg") right center/ 10px 6px no-repeat;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.select__option {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.calendar {
+  border: none;
+  font-size: 16px;
+  line-height: 16px;
+  background: url("/lagoona/img/calendar.svg") right center/ 16px 16px no-repeat;
+  appearance: none;
+  outline: none;
+}
+
+.calendar::-webkit-inner-spin-button,
+.calendar::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.number-input {
+  min-width: 121px;
+  font-size: 16px;
+  line-height: 16px;
+  border: none;
+  border-bottom: solid 1px #e9e9e9;
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  opacity: 1;
 }
