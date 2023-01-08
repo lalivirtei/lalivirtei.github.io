@@ -28,8 +28,7 @@ body {
 }
 
 .btn {
-  height: 42px;
-  padding: 0 20px;
+  padding: 13px 20px;
   font-family: "Muller", sans-serif;
   border: 1px solid #c93;
   border-radius: 10px;
@@ -37,6 +36,18 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  color: #c93;
+}
+
+.btn--big {
+  padding: 27px 29px;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: none;
   color: #c93;
 }
 
@@ -489,6 +500,7 @@ body {
   background: #e9e9e9;
   border-radius: 15px;
   padding: 45px;
+  margin-bottom: 70px;
 }
 
 .tour-form {
@@ -557,3 +569,64 @@ body {
   opacity: 1;
 }
 
+.contacts {
+  margin-bottom: 40px;
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 45px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.contacts__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  padding-right: 53px;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 25px 23px 0;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 25px;
+}
+
+.contacts__btn {
+  /*align-self: flex-end;*/
+}
+
+.contacts-item:last-child {
+  margin-bottom: 45px;
+}
+
+.contacts-item__head {
+  flex-basis: 35%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000;
+}
+
+.contacts-item__descr {
+  flex-basis: 75%;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.contacts-item__link {
+  display: block;
+}
