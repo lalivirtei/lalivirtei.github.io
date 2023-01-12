@@ -1,2 +1,5 @@
-# css-pract
-just practicing some front-end courses
+# lalivirtei
+
+## Зачем?
+
+В основном, для портфолио.
