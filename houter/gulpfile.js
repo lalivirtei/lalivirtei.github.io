@@ -1,6 +1,7 @@
 const {src, dest, watch, parallel, series} = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass')(require('sass'));
+const postCSS = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const bs = require('browser-sync').create();
@@ -19,7 +20,7 @@ function browserSync() {
 }
 
 function layout() {
-    return src('src/**/*.pug')
+    return src('src/index.pug')
         .pipe(pug())
         .pipe(dest('build'))
         .pipe(bs.stream())
@@ -27,8 +28,19 @@ function layout() {
 
 function styles() {
     // noinspection JSCheckFunctionSignatures
-    return src('src/**/*.scss')
+    return src('src/main.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(postCSS([
+            autoprefixer({grid: 'autoplace'}),
+            cssnano({
+                preset: [
+                    'default',
+                    {
+                        discardComments: {removeAll: true}
+                    }
+                ]
+            })
+        ]))
         .pipe(dest('build'))
         .pipe(bs.stream())
 }
@@ -67,10 +79,15 @@ function scripts() {
                 ]
             }
 
-        }, webpack).on('error', err => this.emit('end')))
+        }, webpack).on('error', () => this.emit('end')))
         .pipe(concat('scripts.min.js'))
         .pipe(dest('build'))
         .pipe(bs.stream())
+}
+
+function images() {
+    return src('src/img/*')
+        .pipe(dest('build/img'))
 }
 
 function watcher() {
@@ -84,4 +101,4 @@ exports.scripts = scripts;
 exports.build = parallel(layout, styles, scripts);
 exports.browserSync = browserSync;
 exports.watcher = watcher;
-exports.default = series(layout, styles, scripts, parallel(browserSync, watcher));
+exports.default = series(layout, styles, scripts, images, parallel(browserSync, watcher));
