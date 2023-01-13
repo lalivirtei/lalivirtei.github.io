@@ -9,6 +9,9 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const concat = require('gulp-concat');
 const TerserPlugin = require('terser-webpack-plugin');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const sourcemaps = require('gulp-sourcemaps');
 
 function browserSync() {
     bs.init({
@@ -29,6 +32,7 @@ function layout() {
 function styles() {
     // noinspection JSCheckFunctionSignatures
     return src('src/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postCSS([
             autoprefixer({grid: 'autoplace'}),
@@ -41,12 +45,14 @@ function styles() {
                 ]
             })
         ]))
+        .pipe(sourcemaps.write())
         .pipe(dest('build'))
         .pipe(bs.stream())
 }
 
 function scripts() {
     return src(['src/js/*.js', '!src/js/*.min.js'])
+        .pipe(sourcemaps.init())
         .pipe(webpackStream({
             mode: 'production',
             performance: {hints: false},
@@ -81,24 +87,32 @@ function scripts() {
 
         }, webpack).on('error', () => this.emit('end')))
         .pipe(concat('scripts.min.js'))
+        .pipe(sourcemaps.write())
         .pipe(dest('build'))
         .pipe(bs.stream())
 }
 
 function images() {
     return src('src/img/*')
+        .pipe(changed('build/img'))
+        .pipe(imagemin())
         .pipe(dest('build/img'))
+        .pipe(bs.stream());
 }
 
 function watcher() {
     watch("src/**/*.scss", {usePolling: true}, styles);
+    watch("src/**/*.js", {usePolling: true}, scripts);
+    watch("src/img/*", {usePolling: true}, images);
     watch("src/**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
 }
 
 exports.layout = layout;
 exports.styles = styles;
 exports.scripts = scripts;
-exports.build = parallel(layout, styles, scripts);
+exports.images = images;
+exports.build = parallel(layout, styles, scripts, images);
+
 exports.browserSync = browserSync;
 exports.watcher = watcher;
 exports.default = series(layout, styles, scripts, images, parallel(browserSync, watcher));
