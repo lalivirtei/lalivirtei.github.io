@@ -12,6 +12,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const sourcemaps = require('gulp-sourcemaps');
+const flatten = require('gulp-flatten');
 
 function browserSync() {
     bs.init({
@@ -93,11 +94,17 @@ function scripts() {
 }
 
 function images() {
-    return src('src/img/*')
+    return src('src/**/img/*')
         .pipe(changed('build/img'))
         .pipe(imagemin())
+        .pipe(flatten({subPath: [1, 0]}))
         .pipe(dest('build/img'))
         .pipe(bs.stream());
+}
+
+function assets() {
+    return src('src/favicon/*')
+        .pipe(dest('build'));
 }
 
 function watcher() {
@@ -111,8 +118,8 @@ exports.layout = layout;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
-exports.build = parallel(layout, styles, scripts, images);
+exports.build = parallel(layout, styles, scripts, images, assets);
 
 exports.browserSync = browserSync;
 exports.watcher = watcher;
-exports.default = series(layout, styles, scripts, images, parallel(browserSync, watcher));
+exports.default = series(parallel(layout, styles, scripts, images, assets), parallel(browserSync, watcher));
