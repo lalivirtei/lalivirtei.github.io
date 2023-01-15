@@ -4,7 +4,120 @@ head
     title Houter
     link(rel="stylesheet" href="./main.css")
 body
-    .some hello
-    .other HI
-    include ./blocks/header/header
+    header.header
+        .container
+            .logo
+                img.logo__image(src="" alt="Hounter logo")
+                .logo__text Hounter
+            .header__menu
+                a.btn.btn--transparent(href="#") About us
+                a.btn.btn--transparent(href="#") Article
+                //select
+                button.btn.btn--signup Sign Up!
+    section.hero
+        h1.h1 find the place to
+            | live
+            svg.svg-stroke(viewBox="0 0 10 2")
+                text.svg-stroke__text(x="5" y="1") your dreams
+            | easily here
+        .hero__under-title Everything you need about finding your place to live will be here, where it will be easier for you
+        //include blocks/search/search
+        //include blocks/partners/partners
+        //include blocks/hero-stats/hero-stats
+    section.featured
+        include blocks/featured/featured
+    section.tour
+        .tour__left
+            .outline Ready to sell!
+            h2.h2 Let’s tour and see our house!
+            .tour__undertitle Houses recommended by our partners that have been curated to become the home of your dreams!
+            .tour__detail.house-detail
+                h3.h3 House detail
+                .house-detail__items
+                    .house-detail__item.icon--bed 4 Bedrooms
+                    .house-detail__item.icon--bath 2 Bathrooms
+                    .house-detail__item.icon--car 1 Carport
+                    .house-detail__item.icon--stairs 2 Floors
+            .tour__contact
+                img.tour__contact.avatar.avatar--big
+                .tour__contact-text
+                    .tour__contact-name Dianne Russell
+                    .tour__contact-post Manager Director
+                a.btn.btn--contact(href="tel:+123456" title="Call manager") Contact Now
+        .tour__right
+
+    section.review
+        .outline See our review
+        h2.h2 What Our User Say About Us
+        .review-slider
+            .review-slider__item
+                img.review-img(src="" alt="house picture")
+                .review-content
+                    h3.review-content__title Best! I got the house I wanted through Hounter
+                    .review-content__text Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.
+                    .review-content__info
+                        img.avatar--small()
+                        .review-content__user-info
+                            .revuew-content__user-name Dianne Russell
+                            .revuew-content__user-post Manager Director
+                        .rate 4.6
+    section.tips
+        .outline.outline--top-line See tips and trick from our partnership
+        h2.h2 Find out more about
+            | selling and buying homes
+        button.btn.btn--no-icon More Artikel
+        .tips__left
+            .tips__item.tips__item--small
+                img.tips__item-image()
+                .tips__item-content
+                    .tips__user
+                        img.tips__user-image
+                        .tips__user-name Dianne Russell
+                    .tips__tite The things we need to check when we want to buy a house
+                    .tips__info
+                        span.tips__info--estimate 4 min read
+                        span.tips__info--date 25 Apr 2021
+        .tips__right
+            .tips__item.tips__item--big
+                img.tips__item-image()
+                .tips__item-content
+                    .tips__user
+                        img.tips__user-image
+                        .tips__user-name Dianne Russell
+                    .tips__tite The things we need to check when we want to buy a house
+                    .tips__info
+                        span.tips__info--estimate 4 min read
+                        span.tips__info--date 25 Apr 2021
+    section.subscriber
+        h2.h2 Subscribe For More Info and update from Hounter
+        form.subscriber__form
+            input(type="email").subscriber__input
+            button.btn.btn--no-icon Subsribe Now
+    footer.footer
+        .footer__left
+            .logo.footer__logo
+                img.logo__image(src="" alt="Hounter logo")
+                .logo__text Hounter
+            .footer__left-text We provide information about properties such as houses, villas and apartments to help people find their dream home
+            .footer__socials
+                a.footer__social-item(href="https://ru-ru.facebook.com" target="_blank")
+                    img(src="" title="facebook icon")
+                a.footer__social-item(href="https://twitter.com/?lang=ru" target="_blank")
+                    img(src="" title="twitter icon")
+                a.footer__social-item(href="https://www.instagram.com" target="_blank")
+                    img(src="" title="instagram icon")
+        .footer__property
+            a.footer__link(href="#") House
+            a.footer__link(href="#") Apartment
+            a.footer__link(href="#") Villa
+        .footer__article
+            a.footer__link(href="#") New Article
+            a.footer__link(href="#") Popular Article
+            a.footer__link(href="#") Most Read
+            a.footer__link(href="#") Tips & Tricks
+        addrress.footer__contact
+            a.footer__link(href="https://goo.gl/maps/WmecA94NbUtbcX1X7" target="_blank") 2464 Royal Ln. Mesa, New Jersey 45463
+            a.footer__link(href="+16715550100") (671) 555-0110
+            a.footer__link(href="mailto:info@hounter.com" target="_blank") info@hounter.com
+
     script(src="scripts.min.js")

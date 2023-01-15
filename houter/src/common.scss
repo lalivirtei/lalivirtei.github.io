@@ -1,0 +1,17 @@
+.container {
+  @media (min-width: 1140px) {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+.svg-stroke {
+  stroke-width: 0.015;
+  stroke: #fff;
+  font-size: 1px;
+  fill: none;
+}
+
+.svg-stroke__text {
+
+}
