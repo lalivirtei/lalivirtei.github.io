@@ -52,7 +52,7 @@ function styles() {
 }
 
 function scripts() {
-    return src(['src/js/*.js', '!src/js/*.min.js'])
+    return src(['src/js/*.js', 'node_modules/select2/dist/js/select2.min.js', '!src/js/*.min.js'])
         .pipe(sourcemaps.init())
         .pipe(webpackStream({
             mode: 'production',

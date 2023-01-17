@@ -2,17 +2,33 @@ doctype html
 head
     meta(charset="utf-8")
     title Houter
-    link(rel="stylesheet" href="./main.css")
-body
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/site.webmanifest")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#fff")
+    link(rel="stylesheet" href="/main.css")
+body.body
+    .bg.bg--top
     header.header
         .container
             .logo
-                img.logo__image(src="" alt="Hounter logo")
+                img.logo__image(src="/img/logo.svg" alt="Hounter logo")
                 .logo__text Hounter
             .header__menu
                 a.btn.btn--transparent(href="#") About us
                 a.btn.btn--transparent(href="#") Article
-                //select
+                select.header__select(name="property-select")
+                    option.header__option(value="0")
+                        a.header__option-link(href="#") Property
+                    option.header__option(value="house")
+                        a.header__option-link(href="#") House
+                    option.header__option(value="villa")
+                        a.header__option-link(href="#") villa
+                    option.header__option(value="apartment")
+                        a.header__option-link(href="#") apartment
                 button.btn.btn--signup Sign Up!
     section.hero
         h1.h1 find the place to

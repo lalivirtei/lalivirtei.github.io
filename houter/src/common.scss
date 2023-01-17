@@ -1,3 +1,27 @@
+:root {
+  --text-main: #1B1C57;
+
+}
+
+.body {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 120px;
+  font-family: Lexend, sans-serif;
+}
+
+.bg {
+  &--top {
+    position: absolute;
+    z-index: 0;
+    width: 700px;
+    height: 500px;
+    top: 0;
+    left: 0;
+    background: url("img/bg-blur-1.svg") left top /700px 500px no-repeat;
+  }
+}
+
 .container {
   @media (min-width: 1140px) {
     max-width: 1140px;
