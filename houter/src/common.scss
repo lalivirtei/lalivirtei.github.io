@@ -1,11 +1,14 @@
 :root {
-  --text-main: #1B1C57;
-
+  --text-main: #1b1c57;
+  --text-remark: #626687;
+  --text-secondary: #888b97;
+  --text-subheadline:  #68799F;
+  --opacity-basic: .75;
+  --btn-bg: #10b981;
 }
 
 .body {
   position: relative;
-  padding: 15px;
   font-family: Lexend, sans-serif;
   color: var(--text-main);
   background-repeat: no-repeat;
@@ -23,10 +26,8 @@
 
 .h1__stroked {
   font-family: sans-serif;
-  font-size: 16px;
-  stroke-width: .3;
-  stroke: var(--text-main);
-  fill: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--text-main);
 }
 
 .btn {
@@ -40,10 +41,23 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #F0F3FD;
+  color: #f0f3fd;
 }
 
 .h1 {
   text-transform: capitalize;
   font-weight: 900;
+}
+
+.avatar {
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &--big {
+    width: 56px;
+    height: 56px;
+    border: 3px solid #fff;
+  }
 }

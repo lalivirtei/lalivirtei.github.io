@@ -1,0 +1,41 @@
+.hero {
+  &__left {
+    padding: 15px;
+  }
+  &__right {
+    padding: 15px;
+    overflow: hidden;
+    background: url("img/hero__bg.jpg") top left /cover no-repeat;
+  }
+
+  &__under-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--text-remark);
+    opacity: var(--opacity-basic);
+  }
+
+  &__partners-text {
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--text-secondary);
+  }
+
+  &__partners-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__partners-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

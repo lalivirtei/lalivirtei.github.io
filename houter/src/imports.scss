@@ -1,5 +1,18 @@
-@import "node_modules/normalize.css/normalize";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&display=swap');
+@import "node_modules/normalize.css/normalize";
 @import "node_modules/select2/dist/css/select2.min";
 
-@import "blocks/**/*.scss";
+@import "common";
+
+@import "blocks/featured";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/house-detail";
+@import "blocks/logo";
+@import "blocks/menu";
+@import "blocks/review";
+@import "blocks/search";
+@import "blocks/stats";
+@import "blocks/subscriber";
+@import "blocks/tips";
+@import "blocks/tour";

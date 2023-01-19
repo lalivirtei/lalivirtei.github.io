@@ -1,0 +1,50 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px;
+    background: #fff;
+    box-shadow: 0 11px 48px rgba(51, 51, 51, 0.06);
+    border-radius: 32px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  &__avatar {
+    &:not(:last-child) {
+      margin-right: -30px;
+    }
+  }
+
+  &__house-image {
+    border: none;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__undertitle {
+    font-size: 12px;
+    color: var(--text-subheadline);
+  }
+}
