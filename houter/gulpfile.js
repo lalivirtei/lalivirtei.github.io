@@ -13,6 +13,8 @@ const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const sourcemaps = require('gulp-sourcemaps');
 const flatten = require('gulp-flatten');
+const data = require('gulp-data');
+const content = require('./src/content.json');
 
 function browserSync() {
     bs.init({
@@ -25,6 +27,7 @@ function browserSync() {
 
 function layout() {
     return src('src/index.pug')
+        .pipe(data(() => content))
         .pipe(pug())
         .pipe(dest('build'))
         .pipe(bs.stream())

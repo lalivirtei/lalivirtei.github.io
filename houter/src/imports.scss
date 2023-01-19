@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&display=swap');
 @import "node_modules/normalize.css/normalize";
 @import "node_modules/select2/dist/css/select2.min";
+@import "node_modules/swiper/swiper";
 
 @import "common";
 
@@ -16,3 +17,4 @@
 @import "blocks/subscriber";
 @import "blocks/tips";
 @import "blocks/tour";
+@import "blocks/user";

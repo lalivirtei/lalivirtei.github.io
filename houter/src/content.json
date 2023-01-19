@@ -1,0 +1,48 @@
+{
+  "features": [
+    {
+      "img": "house-2.jpg",
+      "tag": "popular",
+      "name": "Roselands house",
+      "price": "35.000.000",
+      "owner": {
+        "avatar": "ava-3.jpg",
+        "name": "Dianne Russell",
+        "location": "Manchester, Kentucky"
+      }
+    },
+    {
+      "img": "house-3.jpg",
+      "tag": "new",
+      "name": "Woodlandside",
+      "price": "20.000.000",
+      "owner": {
+        "avatar": "ava-5.jpg",
+        "name": "Robert Fox",
+        "location": "Dr. San Jose, South Dakota"
+      }
+    },
+    {
+      "img": "house-4.jpg",
+      "tag": "best",
+      "name": "The Old Lighthouse",
+      "price": "44.000.000",
+      "owner": {
+        "avatar": "ava-6.jpg",
+        "name": "Ronald Richards",
+        "location": "Santa Ana, Illinois"
+      }
+    },
+    {
+      "img": "house-5.jpg",
+      "tag": "popular",
+      "name": "Cosmo's House",
+      "price": "22.000.000",
+      "owner": {
+        "avatar": "ava-7.jpg",
+        "name": "Jenny Wilson",
+        "location": "Preston Rd. Inglewood, Maine 98380"
+      }
+    }
+  ]
+}
