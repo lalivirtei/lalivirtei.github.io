@@ -28,7 +28,9 @@ section.featured
             each item in features
                 li.featured__item.swiper-slide
                     figure.featured__figure
-                        img(src="img/"+item.img alt=item.name class="featured__image featured__image--"+item.tag)
+                        .featured__image-wrapper
+                            img.featured__image(src="img/"+item.img alt=item.name)
+                            small(class="featured__tag featured__tag--"+item.tag)
                         figcaption.fiatured__caption
                             h3.featured__item-name= item.name
                             .featured__item-price= "$ " + item.price

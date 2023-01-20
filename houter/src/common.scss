@@ -29,6 +29,10 @@
   background-size: 700px 500px;
 }
 
+.h2 {
+  margin-top: 5px;
+}
+
 .container {
   @media (min-width: 1140px) {
     max-width: 1140px;
@@ -93,4 +97,8 @@
     height: 1px;
     background: var(--color-outline);
   }
+}
+
+section {
+  margin-bottom: 60px;
 }
