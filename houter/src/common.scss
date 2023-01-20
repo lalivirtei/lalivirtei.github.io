@@ -26,10 +26,7 @@
   font-family: Lexend, sans-serif;
   font-weight: 400;
   color: var(--headline);
-  background-repeat: no-repeat;
-  background-image: url("img/bg-blur-1.svg");
-  background-position: left top;
-  background-size: 700px 500px;
+  background: url("img/body__bg.svg") left -100px top /cover no-repeat;
 }
 
 .h2 {
