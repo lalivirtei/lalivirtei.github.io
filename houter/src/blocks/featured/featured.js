@@ -8,7 +8,7 @@ $(document).ready(function() {
             nextEl: '.featured__arrow--right',
             prevEl: '.featured__arrow--left'
         },
-        spaceBetween: 30,
+        spaceBetween: 15,
         slidesPerView: 'auto',
         centeredSlides: true,
         grabCursor: true,

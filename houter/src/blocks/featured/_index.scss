@@ -1,5 +1,9 @@
 .featured {
-  padding: 0 15px;
+  &__outline,
+  &__h2,
+  &__controls {
+    padding: 0 15px;
+  }
 
   &__controls {
     display: flex;
@@ -27,7 +31,7 @@
     border-radius: 32px;
 
     svg path {
-      fill: var(--color-neutral-control);
+      fill: var(--neutral-700);
     }
 
     &--left {
@@ -38,7 +42,7 @@
     }
 
     &--active {
-      background: var(--btn-bg);
+      background: var(--green-500);
 
       svg path {
         fill: var(--color-bright);
@@ -61,12 +65,12 @@
     }
 
     &--active {
-      color: var(--btn-bg);
+      color: var(--green-500);
       background: var(--green-100);
       border-color: var(--green-100);
 
       svg path {
-        fill: var(--btn-bg);
+        fill: var(--green-500);
       }
     }
 
@@ -83,7 +87,25 @@
   }
 
   &__item {
+    width: 80%;
     max-width: 320px;
+  }
+
+  &__item-name {
+    margin: 24px 0 8px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--neutral-900);
+  }
+
+  &__item-price {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--neutral-500);
   }
 
   &__figure {
@@ -137,27 +159,6 @@
       background-image: url("img/featured__best.svg");
       background-color: var(--green-100);
       color: var(--green-700);
-    }
-  }
-
-  &__item-name {
-    margin: 24px 0 8px;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--neutral-900);
-  }
-
-  &__item-price {
-    position: relative;
-    margin-bottom: 24px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.8;
-    color: var(--neutral-500);
-
-    &::before {
-
     }
   }
 
