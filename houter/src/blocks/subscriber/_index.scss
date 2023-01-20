@@ -1,0 +1,39 @@
+.subscriber {
+  background: url("img/subscriber__bg.png") center center /cover no-repeat;
+  padding: 30px 15px;
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--headline);
+    margin-bottom: 15px;
+  }
+
+  &__form {
+  }
+
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 16px 16px 16px 44px;
+    border: none;
+    border-radius: 32px;
+    overflow: hidden;
+    background: #fff url("img/subscriber__mail.svg") left 15px center /20px no-repeat;
+    margin-bottom: 15px;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--neutral-500);
+    }
+  }
+
+  &__button {
+
+  }
+}
