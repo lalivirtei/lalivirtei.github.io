@@ -1,5 +1,5 @@
 :root {
-  --text-main: #1b1c57;
+  --headline: #1b1c57;
   --text-subheadline: #68799f;
   --color-outline: #f59e0b;
   --color-neutral: #e0e3eb;
@@ -18,12 +18,14 @@
   --neutral-700: #3c4563;
   --neutral-900: #0e1735;
   --opacity-basic: .75;
+  --opacity-picture: .7;
 }
 
 .body {
   position: relative;
   font-family: Lexend, sans-serif;
-  color: var(--text-main);
+  font-weight: 400;
+  color: var(--headline);
   background-repeat: no-repeat;
   background-image: url("img/bg-blur-1.svg");
   background-position: left top;
@@ -44,7 +46,7 @@
 .h1__stroked {
   font-family: sans-serif;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px var(--text-main);
+  -webkit-text-stroke: 1px var(--headline);
 }
 
 .btn {

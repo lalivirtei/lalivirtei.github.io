@@ -1,15 +1,15 @@
 section.review
-    .outline See our review
-    h2.h2 What Our User Say About Us
-    .review-slider
-        .review-slider__item
-            img.review-img(src="" alt="house picture")
-            .review-content
-                h3.review-content__title Best! I got the house I wanted through Hounter
-                .review-content__text Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.
-                .review-content__info
-                    img.avatar--small()
-                    .review-content__user-info
-                        .revuew-content__user-name Dianne Russell
-                        .revuew-content__user-post Manager Director
-                    .review__rate 4.6
+    .outline.review__outline See our review
+    h2.h2.review__h2 What Our User Say About Us
+    .review__slider.swiper
+        .swiper-wrapper
+            each review in reviews
+                .review__slider-item.swiper-slide
+                    img.review__img(src="img/"+review.img alt="House picture")
+                    .review__content
+                        h3.review__content-title= review.title
+                        .review__content-text= review.text
+                        .review__content-info
+                            +user(review.person.avatar, review.person.name, review.person.post, "small")
+                            .review__rate= review.rate
+            .review__pagination.swiper-pagination
