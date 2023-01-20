@@ -12,6 +12,6 @@ $(document).ready(function () {
         spaceBetween: 15,
         centeredSlides: true,
         slidesPerView: "auto",
-        initialSlide: 2
+        initialSlide: 1
     })
 });
