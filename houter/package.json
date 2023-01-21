@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
     "gulp": "^4.0.2",

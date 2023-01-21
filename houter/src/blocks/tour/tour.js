@@ -2,24 +2,31 @@ import $ from 'jquery';
 import Swiper, {Pagination} from 'swiper';
 
 $(document).ready(function () {
-    new Swiper('.tour__images', {
-        modules: [Pagination],
-        pagination: {
-            el: '.tour__pagination',
-            clickable: true
-        },
-        spaceBetween: 30,
-        slidesPerView: "auto",
-        centeredSlides: true
-    })
+    if (window.matchMedia('(max-width: 575px)').matches) {
+        new Swiper('.tour__images', {
+            modules: [Pagination],
+            pagination: {
+                el: '.tour__pagination',
+                clickable: true
+            },
+            spaceBetween: 30,
+            slidesPerView: "auto",
+            centeredSlides: true
+        })
+    }
+
 
     const $videoParent = $('.tour__video-wrapper');
 
-    if(window.matchMedia('(max-width: 1024px)').matches) {
+    if (window.matchMedia('(max-width: 1024px)').matches) {
         let $iframe = $videoParent.find('.tour__iframe');
         const src = $iframe.data('src');
         $videoParent.addClass('tour__video-wrapper--active');
         $iframe.attr('src', src);
+    }
+
+    if (window.matchMedia('(min-width: 576px)').matches) {
+
     }
     // $('.tour__video-button-poster').on('click', function(e) {
     //     e.preventDefault();

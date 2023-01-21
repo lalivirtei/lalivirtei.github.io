@@ -4,10 +4,28 @@
   &__left {
     padding: 15px;
   }
+
   &__right {
     padding: 35px 15px;
     overflow: hidden;
     background: url("img/hero__bg.jpg") top left /cover no-repeat;
+  }
+
+  &__header {
+    text-transform: capitalize;
+    font-weight: 900;
+    max-width: 370px;
+
+    @media (min-width: $screen-sm) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  &__stroked {
+    font-family: sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--headline);
   }
 
   &__under-title {
@@ -34,6 +52,11 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @media (min-width: $screen-sm) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
   }
 
   &__partners-item {
@@ -41,4 +64,5 @@
     align-items: center;
     justify-content: center;
   }
+
 }
