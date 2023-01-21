@@ -11,14 +11,14 @@ $(document).ready(function() {
         spaceBetween: 15,
         slidesPerView: 'auto',
         centeredSlides: true,
-        grabCursor: true,
-        clickable: true
+        grabCursor: true
     })
 
     let $allButtons = $('.featured__btn');
 
     $allButtons.each(function() {
         $(this).on('click', function() {
+            console.log('click')
             $allButtons.each(function () {
                 $(this).removeClass('featured__btn--active');
             })
