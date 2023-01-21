@@ -1,8 +1,12 @@
 .featured {
-  &__outline,
   &__h2,
   &__controls {
     padding: 0 15px;
+  }
+
+  &__outline {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   &__controls {

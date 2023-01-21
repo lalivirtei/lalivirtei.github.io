@@ -15,7 +15,9 @@ section.tour
             +user("ava-3.jpg", "Dianne Russell", "Manager Director", "big")
             a.btn.tour__call-button(href="tel:+123456" title="Call manager") Contact Now
     .tour__right
-        iframe#tour__iframe.tour__iframe(src="https://www.youtube.com/embed/IZpTNq-mfNE?rel=0&iv_load_policy=3&color=white&enablejsapi=1" width="560" height="315" title="Our house tour" allowfullscreen)
+        .tour__video-wrapper
+            iframe.tour__iframe(src="" allowTransparency='true' allowfullscreen data-src='https://www.youtube.com/embed/IZpTNq-mfNE?autoplay=1&mute=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white')
+            button.tour__video-button-poster
         figure.tour__images.swiper(role="group")
             .swiper-wrapper
                 img.tour__img.swiper-slide(src="img/house-6__inside-1.jpg" alt="Interior photo")
