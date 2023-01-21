@@ -3,6 +3,7 @@
     {
       "img": "house-2.jpg",
       "tag": "popular",
+      "type": "house",
       "name": "Roselands house",
       "price": "35.000.000",
       "owner": {
@@ -14,6 +15,7 @@
     {
       "img": "house-3.jpg",
       "tag": "new",
+      "type": "villa",
       "name": "Woodlandside",
       "price": "20.000.000",
       "owner": {
@@ -25,6 +27,7 @@
     {
       "img": "house-4.jpg",
       "tag": "best",
+      "type": "apartment",
       "name": "The Old Lighthouse",
       "price": "44.000.000",
       "owner": {
@@ -36,6 +39,7 @@
     {
       "img": "house-5.jpg",
       "tag": "popular",
+      "type": "house",
       "name": "Cosmo's House",
       "price": "22.000.000",
       "owner": {

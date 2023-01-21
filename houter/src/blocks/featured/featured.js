@@ -14,4 +14,25 @@ $(document).ready(function() {
         grabCursor: true,
         clickable: true
     })
+
+    let $allButtons = $('.featured__btn');
+
+    $allButtons.each(function() {
+        $(this).on('click', function() {
+            $allButtons.each(function () {
+                $(this).removeClass('featured__btn--active');
+            })
+            $(this).addClass('featured__btn--active');
+
+            let buttonType = $(this).data('type');
+
+            $('.featured__item').each(function() {
+                $(this).css('display', 'block');
+
+                if ($(this).data('type') !== buttonType) {
+                    $(this).css('display', 'none');
+                }
+            })
+        })
+    })
 })
