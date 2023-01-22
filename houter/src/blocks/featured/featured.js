@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Swiper, {Navigation} from "swiper";
 
 $(document).ready(function() {
-    new Swiper('.featured__list', {
+    const featureSlider = new Swiper('.featured__list', {
         modules: [Navigation],
         navigation: {
             nextEl: '.featured__arrow--right',
@@ -33,6 +33,8 @@ $(document).ready(function() {
                     $(this).css('display', 'none');
                 }
             })
+
+            featureSlider.update();
         })
     })
 })

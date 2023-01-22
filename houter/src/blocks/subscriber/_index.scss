@@ -3,15 +3,26 @@
   padding: 30px 15px;
 
   &__title {
+    max-width: 430px;
+    margin: 0 auto 15px;
     font-weight: 600;
     line-height: 1.5;
     text-align: center;
     text-transform: capitalize;
     color: var(--headline);
-    margin-bottom: 15px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 32px;
+    }
   }
 
   &__form {
+    max-width: 496px;
+    margin: 0 auto;
+    
+    @media (min-width: $screen-sm) {
+      position: relative;
+    }
   }
 
   &__input {
@@ -31,9 +42,19 @@
       line-height: 22px;
       color: var(--neutral-500);
     }
+
   }
 
   &__button {
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+    }
+  }
 
+  @media (min-width: $screen-sm) {
+    padding: 65px 0;
   }
 }
