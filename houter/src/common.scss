@@ -34,6 +34,10 @@ $screen-xl: 1200px;
   color: var(--headline);
   background: url("img/body__bg.svg") left -100px top /cover no-repeat;
   min-width: 320px;
+
+  @media (min-width: $screen-lg) {
+    background-position: center top;
+  }
 }
 
 .h2 {
@@ -62,6 +66,7 @@ $screen-xl: 1200px;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
   color: var(--neutral-100);
 
   &--action {
@@ -82,6 +87,7 @@ $screen-xl: 1200px;
     line-height: 22px;
     color: var(--green-700);
     background: var(--green-100);
+
   }
 }
 

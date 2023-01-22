@@ -9,6 +9,10 @@
   &__slider-item {
     width: 80%;
     margin-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      max-width: 740px;
+    }
   }
 
   &__img {
@@ -26,6 +30,17 @@
     background: var(--white);
     border-radius: 16px;
     box-shadow: 0 9px 32px rgba(89, 92, 219, 0.05);
+
+    @media (min-width: $screen-sm) {
+      max-width: 512px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-md) {
+      position: relative;
+      z-index: 1;
+      margin-top: -144px;
+    }
   }
 
   &__content-title {

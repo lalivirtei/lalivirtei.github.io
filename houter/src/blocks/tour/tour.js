@@ -16,37 +16,6 @@ $(document).ready(function () {
         })
     }
 
-
-    const $videoParent = $('.tour__video-wrapper');
-
-    if (window.matchMedia('(max-width: 1024px)').matches) {
-        let $iframe = $videoParent.find('.tour__iframe');
-        const src = $iframe.data('src');
-        $videoParent.addClass('tour__video-wrapper--active');
-        $iframe.attr('src', src);
-    }
-
-    if (window.matchMedia('(min-width: 576px)').matches) {
-
-    }
-    // $('.tour__video-button-poster').on('click', function(e) {
-    //     e.preventDefault();
-    //     var poster = $(this);
-    //     var wrapper = poster.closest('.tour__video-wrapper');
-    //     videoPlay(wrapper);
-    // });
-    //
-    // function videoPlay(wrapper) {
-    //     var iframe = wrapper.find('.tour__iframe');
-    //     var src = iframe.data('src');
-    //     wrapper.addClass('tour__video-wrapper--active');
-    //     iframe.attr('src',src);
-    // }
-
-    Fancybox.bind("[data-fancybox]", {
-        // Your options go here
-    });
-
     $('.tour__fancy-video').click(function() {
         Fancybox.show([
             {

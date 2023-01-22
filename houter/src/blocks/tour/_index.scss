@@ -3,6 +3,16 @@
 
   &__left {
     margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+    }
+  }
+
+  &__right {
+    @media (min-width: $screen-md) {
+      width: 50%;
+    }
   }
 
   &__undertitle {
@@ -72,6 +82,14 @@
   &__user {
     margin-right: 60px;
     margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
   }
 
   &__call-button {
@@ -83,10 +101,13 @@
     text-decoration: none;
     color: var(--white);
     background: var(--green-500) url("img/tour__phone.svg") center left 16px /19px no-repeat;
+
+    @media (min-width: $screen-md) {
+      padding-left: 40px;
+    }
   }
 
   &__video-holder {
-    width: 100%;
     height: 50vh;
     border-radius: 4px;
     background-image: url("img/tour__play.svg"), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/house-6.jpg");
@@ -99,6 +120,11 @@
       width: 488px;
       height: 416px;
       margin: 0 auto -120px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      margin-bottom: -80px;
     }
   }
 
@@ -128,16 +154,40 @@
         height: 168px;
       }
     }
+
+    @media (min-width: $screen-md) {
+      width: unset;
+      flex: 1 1 30%;
+      margin-right: 0;
+
+      &:first-child {
+        width: unset;
+        flex-basis: 40%;
+        height: 120px;
+      }
+    }
   }
 
-  @media (min-width: $screen-sm) {
-    &__swiper-wrapper {
-      width: 508px;
+  &__swiper-wrapper {
+    @media (min-width: $screen-sm) {
       left: 47%;
+      width: 508px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
       transform: translateX(-50%);
     }
+
+    @media (min-width: $screen-md) {
+      left: 0;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: space-around;
+      transform: none;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
   }
 }

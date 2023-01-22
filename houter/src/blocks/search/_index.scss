@@ -1,6 +1,7 @@
 .search {
   position: relative;
   display: flex;
+  max-width: 496px;
   align-items: center;
   margin-bottom: 40px;
 
@@ -13,6 +14,16 @@
 
     &::placeholder {
       color: var(--neutral-500);
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 35px;
+      background-position: center left 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 65px;
+      background-position: center left 27px;
     }
   }
 

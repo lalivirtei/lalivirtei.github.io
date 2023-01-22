@@ -9,7 +9,7 @@ $(document).ready(function () {
     $select.select2({
         placeholder: 'Property',
         minimumResultsForSearch: Infinity,
-        width: '200px'
+        width: '122px'
     });
 
     $select.on('select2:select', function (e) {
