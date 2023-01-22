@@ -47,4 +47,12 @@
     font-size: 12px;
     color: var(--text-subheadline);
   }
+
+  @media (min-width: $screen-md) {
+    padding-left: 15px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 48px;
+  }
 }

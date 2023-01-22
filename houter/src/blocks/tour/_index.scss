@@ -1,8 +1,18 @@
 .tour {
+  padding: 0 15px;
 
   &__left {
     margin-bottom: 30px;
-    padding: 0 15px;
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+    }
+  }
+
+  &__right {
+    @media (min-width: $screen-md) {
+      width: 50%;
+    }
   }
 
   &__undertitle {
@@ -16,6 +26,7 @@
 
   &__detail {
     margin-bottom: 32px;
+    max-width: 413px;
   }
 
   &__detail-list {
@@ -54,6 +65,7 @@
 
   &__divider {
     width: 90%;
+    max-width: 440px;
     height: 2px;
     background-color: var(--neutral-100);
     border: none;
@@ -61,67 +73,60 @@
     margin-bottom: 32px;
   }
 
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__user {
+    margin-right: 60px;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
   &__call-button {
     display: inline-block;
     padding: 13px 16px 13px 56px;
-    margin-top: 15px;
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
     text-decoration: none;
     color: var(--white);
     background: var(--green-500) url("img/tour__phone.svg") center left 16px /19px no-repeat;
+
+    @media (min-width: $screen-md) {
+      padding-left: 40px;
+    }
   }
 
-  &__video-wrapper {
-    position: relative;
-  }
-
-  &__iframe {
-    width: 100%;
-    margin-bottom: 20px;
-    border: none;
+  &__video-holder {
+    height: 50vh;
     border-radius: 4px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-  }
+    background-image: url("img/tour__play.svg"), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/house-6.jpg");
+    background-position: center, center, center;
+    background-size: 48px, cover, cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
 
-  &__video-button-poster {
-    display: none;
-  //  position: absolute;
-  //  top: 0px;
-  //  left: 0px;
-  //  width: 100%;
-  //  height: 100%;
-  //  background-image:url(http://c.fastcompany.net/multisite_files/cocreate/imagecache/inline-large/inline/2013/01/1682283-inline-inline-2-music-veteran-amani-duncan-on-marketing-cf-martin-the-worlds-oldest-guitar-maker.jpg);
-  //  background-size: 100%;
-  //  border: none;
-  //  text-indent: -999em;
-  //  overflow: hidden;
-  //  opacity: 1;
-  //  transition: opacity 800ms, height 0s;
-  //  transition-delay: 0s, 0s;
-  //
-  //  &::before {
-  //    content: '';
-  //    position: absolute;
-  //    top: 50%;
-  //    left: 50%;
-  //    width: 80px;
-  //    height: 80px;
-  //    margin: -40px 0 0 -40px;
-  //    border: 5px solid #fff;
-  //    border-radius: 100%;
-  //    transition: border-color 300ms;
-  //  }
-  }
-  //
-  //&__video-wrapper--active .tour__video-button-poster {
-  //  opacity: 0;
-  //  height: 0;
-  //  transition-delay: 0s, 800ms;
-  //}
+    @media (min-width: $screen-sm) {
+      width: 488px;
+      height: 416px;
+      margin: 0 auto -120px;
+    }
 
+    @media (min-width: $screen-md) {
+      width: 100%;
+      margin-bottom: -80px;
+    }
+  }
 
   &__images {
     margin: 0;
@@ -130,10 +135,59 @@
   &__img {
     display: block;
     width: 70%;
+    max-width: 296px;
     height: 200px;
     border-radius: 4px;
     overflow: hidden;
     object-fit: cover;
+
+    @media (min-width: $screen-sm) {
+      width: 96px;
+      height: 80px;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      &:first-child {
+        width: 296px;
+        height: 168px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      width: unset;
+      flex: 1 1 30%;
+      margin-right: 0;
+
+      &:first-child {
+        width: unset;
+        flex-basis: 40%;
+        height: 120px;
+      }
+    }
   }
 
+  &__swiper-wrapper {
+    @media (min-width: $screen-sm) {
+      left: 47%;
+      width: 508px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $screen-md) {
+      left: 0;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: space-around;
+      transform: none;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
 }

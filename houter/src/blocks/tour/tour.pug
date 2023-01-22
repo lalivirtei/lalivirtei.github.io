@@ -12,15 +12,13 @@ section.tour#tour
                 .tour__detail-item 2 Floors
         hr.tour__divider
         .tour__contact
-            +user("ava-3.jpg", "Dianne Russell", "Manager Director", "big")
+            .tour__user
+                +user("ava-3.jpg", "Dianne Russell", "Manager Director", "big")
             a.btn.tour__call-button(href="tel:+123456" title="Call manager") Contact Now
     .tour__right
-        .tour__video-wrapper
-            iframe.tour__iframe(src="" allowTransparency='true' allowfullscreen data-src='https://www.youtube.com/embed/IZpTNq-mfNE?autoplay=1&mute=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white')
-            button.tour__video-button-poster
+        .tour__video-holder.tour__fancy-video
         figure.tour__images.swiper(role="group")
-            .swiper-wrapper
-                img.tour__img.swiper-slide(src="img/house-6__inside-1.jpg" alt="Interior photo")
-                img.tour__img.swiper-slide(src="img/house-6__inside-2.jpg" alt="Interior photo")
-                img.tour__img.swiper-slide(src="img/house-6__inside-3.jpg" alt="Interior photo")
-            .tour__pagination.swiper-pagination
+            .tour__swiper-wrapper.swiper-wrapper
+                img.tour__img.swiper-slide(src="img/house-6__inside-1.jpg" alt="Interior photo" data-fancybox="tour" data-caption="House interior")
+                img.tour__img.swiper-slide(src="img/house-6__inside-2.jpg" alt="Interior photo" data-fancybox="tour" data-caption="House interior")
+                img.tour__img.swiper-slide(src="img/house-6__inside-3.jpg" alt="Interior photo" data-fancybox="tour" data-caption="House interior")

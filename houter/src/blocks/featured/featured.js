@@ -2,17 +2,19 @@ import $ from 'jquery';
 import Swiper, {Navigation} from "swiper";
 
 $(document).ready(function() {
-    new Swiper('.featured__list', {
+
+    const featureSlider = new Swiper('.featured__list', {
         modules: [Navigation],
         navigation: {
             nextEl: '.featured__arrow--right',
             prevEl: '.featured__arrow--left'
         },
-        spaceBetween: 15,
+        spaceBetween: 40,
         slidesPerView: 'auto',
         centeredSlides: true,
-        grabCursor: true
-    })
+        grabCursor: true,
+        initialSlide: getInitialSlide()
+    });
 
     let $allButtons = $('.featured__btn');
 
@@ -33,6 +35,18 @@ $(document).ready(function() {
                     $(this).css('display', 'none');
                 }
             })
+
+            featureSlider.update();
         })
     })
 })
+
+function getInitialSlide() {
+    let num = 0;
+
+    if  (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches) {
+        num = 1;
+    }
+
+    return num;
+}

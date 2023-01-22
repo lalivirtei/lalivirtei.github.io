@@ -2,6 +2,9 @@
   &__h2,
   &__controls {
     padding: 0 15px;
+    @media (min-width: $screen-sm) {
+      justify-content: space-between;
+    }
   }
 
   &__outline {
@@ -20,6 +23,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-right: 15px;
   }
 
   &__arrows {
@@ -129,6 +133,10 @@
     border-radius: 24px;
     overflow: hidden;
     object-fit: cover;
+
+    @media (min-width: $screen-sm) {
+      height: 382px;
+    }
   }
 
   &__tag {
