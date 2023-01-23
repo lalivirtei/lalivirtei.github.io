@@ -21,6 +21,24 @@
         margin-bottom: 60px;
       }
     }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 0;
+
+      &:first-child {
+        flex: 4 1 auto;
+        margin-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        flex-grow: 0;
+      }
+
+    }
   }
 
   &__logo {
@@ -66,11 +84,26 @@
     &:not(:last-child) {
       margin-bottom: 18px;
     }
+
+    @media (min-width: $screen-lg) {
+      white-space: nowrap;
+    }
   }
 
   @media (min-width: $screen-sm) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $screen-xl) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 120px;
   }
 
 }
