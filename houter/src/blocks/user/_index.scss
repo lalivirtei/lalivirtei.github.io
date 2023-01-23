@@ -25,14 +25,30 @@
 
   &__info {
     font-size: 14px;
+    line-height: 22px;
     font-weight: 500;
     color: var(--neutral-500);
   }
 
   &--big {
+
     .user__img {
       width: 56px;
       height: 56px;
+    }
+  }
+
+  &--small {
+
+    .user__img {
+      border: 5px solid var(--white);
+    }
+
+    .user__caption {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: stretch;
     }
   }
 }

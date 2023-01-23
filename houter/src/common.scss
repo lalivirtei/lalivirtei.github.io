@@ -42,6 +42,7 @@ $screen-xl: 1220px;
 
 .h2 {
   margin-top: 5px;
+  padding-left: 40px;
 
   @media (min-width: $screen-sm) {
     font-size: 32px;
@@ -144,4 +145,16 @@ $screen-xl: 1220px;
 
 section {
   margin-bottom: 60px;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 120px;
+  }
 }

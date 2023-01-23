@@ -44,8 +44,10 @@ $(document).ready(function() {
 function getInitialSlide() {
     let num = 0;
 
-    if  (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches) {
+    if  (window.matchMedia('(min-width: 576px)').matches) {
         num = 1;
+    } else if  (window.matchMedia('(min-width: 1220px)').matches) {
+        num = 2;
     }
 
     return num;
