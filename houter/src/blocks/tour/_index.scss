@@ -5,7 +5,12 @@
     margin-bottom: 30px;
 
     @media (min-width: $screen-md) {
+      padding-right: 15px;
       width: 50%;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 40px;
     }
   }
 
@@ -13,9 +18,25 @@
     @media (min-width: $screen-md) {
       width: 50%;
     }
+
+    @media (min-width: $screen-lg) {
+      margin-top: -28px;
+    }
+  }
+
+  &__outline {
+    margin-bottom: 12px;
+    @media (min-width: $screen-lg) {
+      margin-left: -40px;
+    }
+  }
+
+  &__h2 {
+    margin-top: 0;
   }
 
   &__undertitle {
+    max-width: 413px;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
@@ -108,7 +129,7 @@
   }
 
   &__video-holder {
-    height: 50vh;
+    height: 300px;
     border-radius: 4px;
     background-image: url("img/tour__play.svg"), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/house-6.jpg");
     background-position: center, center, center;
@@ -125,11 +146,39 @@
     @media (min-width: $screen-md) {
       width: 100%;
       margin-bottom: -80px;
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 488px;
+      margin-bottom: -130px;
     }
   }
 
   &__images {
     margin: 0;
+    position: relative;
+
+    @media (min-width: $screen-sm) {
+      left: 47%;
+      width: 508px;
+      overflow: visible;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $screen-md) {
+      left: 15px;
+      width: 92%;
+      transform: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      left: -25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: 35px;
+    }
   }
 
   &__img {
@@ -157,37 +206,51 @@
 
     @media (min-width: $screen-md) {
       width: unset;
-      flex: 1 1 30%;
-      margin-right: 0;
+      flex: 1 1 25%;
 
       &:first-child {
         width: unset;
-        flex-basis: 40%;
+        flex-basis: 50%;
         height: 120px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+      width: 96px;
+      height: 80px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        flex: 0 0 auto;
+        width: 296px;
+        height: 168px;
       }
     }
   }
 
   &__swiper-wrapper {
     @media (min-width: $screen-sm) {
-      left: 47%;
-      width: 508px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      transform: translateX(-50%);
     }
 
     @media (min-width: $screen-md) {
-      left: 0;
-      width: 90%;
-      margin: 0 auto;
       justify-content: space-around;
-      transform: none;
     }
   }
 
   @media (min-width: $screen-md) {
     display: flex;
+  }
+
+  @media (min-width: $screen-xl) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
