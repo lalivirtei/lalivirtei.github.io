@@ -29,11 +29,11 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
-    padding: 16px 16px 16px 44px;
+    padding: 16px 16px 16px 55px;
     border: none;
     border-radius: 32px;
     overflow: hidden;
-    background: #fff url("img/subscriber__mail.svg") left 15px center /20px no-repeat;
+    background: #fff url("img/subscriber__mail.svg") left 25px center /20px no-repeat;
     margin-bottom: 15px;
 
     &::placeholder {
@@ -43,6 +43,9 @@
       color: var(--neutral-500);
     }
 
+    @media (min-width: $screen-sm) {
+      padding: 18px 145px 18px 55px;
+    }
   }
 
   &__button {
@@ -57,4 +60,12 @@
   @media (min-width: $screen-sm) {
     padding: 65px 0;
   }
+
+  @media (min-width: $screen-xl) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+  }
+
 }
