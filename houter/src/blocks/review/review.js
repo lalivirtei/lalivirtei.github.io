@@ -5,13 +5,14 @@ $(document).ready(function () {
     new Swiper('.review__slider', {
         modules: [Pagination],
         pagination: {
-            el: '.review__pagination',
+            el: '.swiper-pagination',
             clickable: true,
             type: 'bullets'
         },
         spaceBetween: 15,
         centeredSlides: true,
         slidesPerView: "auto",
-        initialSlide: 1
+        initialSlide: 1,
+        autoHeight: true
     })
 });

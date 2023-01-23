@@ -1,9 +1,16 @@
 .review {
-  margin-bottom: 0;
 
   &__h2 {
     padding: 0 15px;
     text-align: center;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slider {
+    padding-bottom: 55px;
   }
 
   &__slider-item {
@@ -23,6 +30,10 @@
     object-fit: cover;
     opacity: var(--opacity-picture);
     border-radius: 8px;
+
+    @media (min-width: $screen-md) {
+      height: 400px;
+    }
   }
 
   &__content {
@@ -64,6 +75,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__rate {
@@ -73,5 +85,13 @@
     line-height: 28px;
     color: var(--neutral-700);
     background: url("img/review__star.svg") left center /23px no-repeat;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: var(--neutral-300);
+
+  &-active {
+    background: var(--neutral-700);
   }
 }
