@@ -1,4 +1,5 @@
 .menu {
+  width: 100%;
 
   &--open &__content {
     display: flex;
@@ -9,26 +10,47 @@
     padding: 15px 30px;
     height: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     border-radius: 5px;
     background: rgb(124,191,224);
     background: linear-gradient(173deg, rgba(124,191,224,1) 22%, rgba(171,206,227,1) 64%);
 
     @media (min-width: $screen-md) {
-      padding-left: 0;
-      padding-right: 0;
+      padding: 5px;
       display: flex;
       background: none;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      align-items: flex-end;
       height: unset;
     }
 
     @media (min-width: $screen-lg) {
       padding-left: 30px;
       padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 0;
+      padding-left: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 56px;
+      margin-bottom: 0;
     }
   }
 
@@ -77,10 +99,15 @@
 
     @media (min-width: $screen-md) {
       margin-right: 5px;
+      margin-bottom: 0;
     }
 
     @media (min-width: $screen-lg) {
       margin-right: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
     }
   }
 
@@ -108,5 +135,10 @@
         margin-top: 0;
       }
     }
+  }
+
+  @media (min-width: $screen-lg) {
+    position: relative;
+    z-index: 1;
   }
 }

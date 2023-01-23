@@ -11,9 +11,11 @@
     border: 1px solid #e0e3eb;
     border-radius: 32px;
     background: url("img/search__map.svg") center left 27px /18px 22px no-repeat;
+    font-size: 14px;
 
     &::placeholder {
       color: var(--neutral-500);
+      font-size: 14px;
     }
 
     @media (min-width: $screen-md) {
