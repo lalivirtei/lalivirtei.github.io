@@ -1,13 +1,27 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-    const $signModal = $('.signup');
+    const $signup = $('.signup');
+    const $btnClose = $('.signup__button--close');
+    let $body = $('.body');
 
     $('.btn--signup').click(function() {
-        $signModal.addClass('signup--open');
+        $signup.addClass('signup--open');
+        $body.addClass('body--no-scroll');
+    });
 
-        $('.signup__button--close').click(function () {
-            $signModal.removeClass('signup--open');
-        })
-    })
+    $btnClose.click(function () {
+        hideModal();
+    });
+
+    $signup.click(function(e) {
+       if (!$(e.target).closest('.signup__container').length) {
+           hideModal();
+       }
+    });
+
+    function hideModal() {
+        $signup.removeClass('signup--open');
+        $body.removeClass('body--no-scroll');
+    }
 })

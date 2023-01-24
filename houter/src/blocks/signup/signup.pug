@@ -1,7 +1,8 @@
-form.signup(method="GET" action="")
-    button.signup__button.signup__button--close.btn.btn--action X
-    input.signup__input(type="email" name="email" placeholder="Email")
-    input.signup__input(type="text" name="username" placeholder="Name")
-    input.signup__input(type="password" name="password" placeholder="Password")
-    input.signup__input(type="password" name="password-repeat" placeholder="Repeat password")
-    button.signup__button.btn.btn--action(type="submit") Submit
+form.signup(method="GET" action="send.php")
+    .signup__container
+        button.signup__button.signup__button--close.btn X
+        input.signup__input(type="text" name="username" placeholder="Your name")
+        input.signup__input(type="email" name="email" placeholder="Your email")
+        input.signup__input(type="password" name="password" placeholder="Enter Password")
+        input.signup__input(type="password" name="password-repeat" placeholder="Repeat password, please")
+        button.signup__button.btn.btn--action(type="submit") Submit
