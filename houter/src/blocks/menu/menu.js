@@ -36,13 +36,10 @@ $(document).ready(function () {
         })
     });
 
-    $('.btn--signup').click(function() {
-
-    });
-
     function toggleMenu() {
-        $menu.toggleClass('menu--open');
-        $body.toggleClass('no-scroll');
+        if (window.matchMedia('max-width: 767px').matches) {
+            $menu.toggleClass('menu--open');
+            $body.toggleClass('body--no-scroll');
+        }
     }
-
 })

@@ -20,7 +20,6 @@ $(document).ready(function() {
 
     $allButtons.each(function() {
         $(this).on('click', function() {
-            console.log('click')
             $allButtons.each(function () {
                 $(this).removeClass('featured__btn--active');
             })
