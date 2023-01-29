@@ -3,7 +3,7 @@
   display: flex;
   max-width: 496px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
 
   &__input {
     width: 100%;
@@ -16,6 +16,10 @@
     &::placeholder {
       color: var(--neutral-500);
       font-size: 14px;
+    }
+
+    &:focus {
+      outline: black solid 1px;
     }
 
     @media (min-width: $screen-md) {
@@ -54,11 +58,11 @@
 
     @media (min-width: $screen-sm){
       font-size: 14px;
-      padding: 13px 34px 13px 15px;
+      padding: 13px 42px 13px 15px;
 
       &::after {
         position: absolute;
-        right: 15px;
+        right: 21px;
       }
     }
   }
