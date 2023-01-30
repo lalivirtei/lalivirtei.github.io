@@ -11,16 +11,17 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 24px;
+    padding: 24px 23px;
     background: #fff;
     box-shadow: 0 11px 48px rgba(51, 51, 51, 0.06);
     border-radius: 32px;
+
     &:not(:last-child) {
       margin-bottom: 15px;
     }
 
     @media (min-width: $screen-xl) {
-      margin-right: 15px;
+      margin-right: 17px;
       flex-shrink: 0;
 
       &:not(:last-child) {
@@ -37,8 +38,22 @@
   }
 
   &__avatar {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+
     &:not(:last-child) {
-      margin-right: -30px;
+      margin-right: -28px;
+    }
+
+    &--squared {
+      width: 56px;
+      height: 56px;
+      border-radius: 24px;
+      border: none;
     }
   }
 

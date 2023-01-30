@@ -61,7 +61,8 @@
 }
 
 .select2-container--open .select2-dropdown--below {
-  border-radius: 32px;
+  border: 1px solid hsla(0, 0%, 100%, .3);
+  border-radius: 15px;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
@@ -109,4 +110,8 @@
   &:hover {
     color: var(--neutral-200);
   }
+}
+
+.select2-container--open .select2-dropdown {
+  left: 5px;
 }
