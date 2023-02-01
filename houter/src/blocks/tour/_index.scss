@@ -33,6 +33,7 @@
 
   &__h2 {
     margin-top: 0;
+    margin-bottom: 12px;
   }
 
   &__undertitle {
@@ -50,12 +51,21 @@
     max-width: 413px;
   }
 
+  &__detail-heading {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--headline);
+    opacity: var(--opacity-basic);
+  }
+
   &__detail-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-row-gap: 15px;
   }
 
   &__detail-item {
@@ -66,6 +76,7 @@
     white-space: nowrap;
     color: var(--neutral-700);
     background: center left /32px no-repeat;
+    text-transform: capitalize;
 
     &:nth-child(1) {
       background-image: url("img/tour__bed.svg");
@@ -82,6 +93,11 @@
     &:nth-child(4) {
       background-image: url("img/tour__stairs.svg");
     }
+
+    @media (min-width: $screen-sm) {
+      padding-left: 48px;
+      min-width: 183px;
+    }
   }
 
   &__divider {
@@ -91,7 +107,7 @@
     background-color: var(--neutral-100);
     border: none;
     margin-left: 0;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   &__contact {
@@ -111,6 +127,10 @@
     @media (min-width: $screen-md) {
       margin-bottom: 0;
     }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 58px;
+    }
   }
 
   &__call-button {
@@ -121,10 +141,10 @@
     line-height: 22px;
     text-decoration: none;
     color: var(--white);
-    background: var(--green-500) url("img/tour__phone.svg") center left 16px /19px no-repeat;
+    background: var(--green-500) url(img/tour__phone.svg) center left 18px/17px no-repeat;
 
     @media (min-width: $screen-md) {
-      padding-left: 40px;
+      padding-left: 55px;
     }
   }
 
@@ -151,7 +171,7 @@
 
     @media (min-width: $screen-xl) {
       width: 488px;
-      margin-bottom: -130px;
+      margin-bottom: -125px;
     }
   }
 
@@ -177,7 +197,7 @@
     }
 
     @media (min-width: $screen-xl) {
-      left: 35px;
+      left: 39px;
     }
   }
 
@@ -252,5 +272,6 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 114px;
   }
 }
