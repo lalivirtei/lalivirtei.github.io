@@ -45,6 +45,7 @@
 
     @media (min-width: $screen-sm) {
       padding: 18px 145px 18px 55px;
+      margin-bottom: 0;
     }
   }
 
@@ -58,7 +59,7 @@
   }
 
   @media (min-width: $screen-sm) {
-    padding: 65px 0;
+    padding: 74px 0 72px;
   }
 
   @media (min-width: $screen-xl) {

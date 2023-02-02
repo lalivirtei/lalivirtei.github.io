@@ -10,12 +10,12 @@
     margin-top: 0;
 
     @media (min-width: $screen-lg) {
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
   }
 
   &__slider {
-    padding-bottom: 55px;
+    padding-bottom: 53px;
   }
 
   &__slider-item {
@@ -86,12 +86,16 @@
   }
 
   &__rate {
-    padding-left: 30px;
+    padding-left: 46px;
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
     color: var(--neutral-700);
-    background: url("img/review__star.svg") left center /23px no-repeat;
+    background: url("img/review__star.svg") left center /28px no-repeat;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 106px;
   }
 }
 

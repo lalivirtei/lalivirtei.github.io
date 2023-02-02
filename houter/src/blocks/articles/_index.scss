@@ -7,10 +7,8 @@
 
   &__h2 {
     max-width: 435px;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
+    margin: 0 auto 20px;
   }
 
   &__btn {
@@ -27,7 +25,11 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 45px;
-      grid-row-gap: 42px
+      grid-row-gap: 38px;
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-column-gap: 80px;
     }
   }
 
@@ -45,19 +47,20 @@
 
   &__user {
     margin-bottom: 12px;
+    margin-top: -5px;
   }
 
   &__title {
     font-weight: 500;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.7;
     text-transform: capitalize;
     color: var(--headline);
     margin-bottom: 5px;
     margin-top: 0;
 
     @media (min-width: $screen-sm) {
-      margin-bottom: 15px;
+      margin-bottom: 11px;
     }
   }
 
@@ -101,8 +104,13 @@
 
     @media (min-width: $screen-sm) {
       width: 200px;
-      margin-right: 32px;
+      margin-right: 20px;
       margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-shrink: 0;
+      margin-right: 32px;
     }
   }
 
@@ -131,7 +139,7 @@
 
         .articles__item-image {
           width: 100%;
-          margin-bottom: 24px;
+          margin-bottom: 25px;
         }
 
         .articles__item-content {
@@ -140,6 +148,18 @@
 
         .articles__item-image {
           height: 280px;
+        }
+
+        .articles__user {
+          margin-bottom: 7px;
+        }
+
+        .articles__title {
+          margin-bottom: 6px;
+        }
+
+        .articles__description {
+          margin-bottom: 12px;
         }
       }
     }
@@ -153,5 +173,6 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 110px;
   }
 }
