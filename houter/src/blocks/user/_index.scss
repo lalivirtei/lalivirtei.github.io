@@ -43,6 +43,7 @@
     }
 
     .user__name {
+      font-size: 18px;
       line-height: 1.6;
     }
 
@@ -52,19 +53,23 @@
   }
 
   &--mid {
+    padding-top: 2px;
+
     .user__img {
       width: 40px;
       height: 40px;
-      margin-right: 23px;
+      margin-right: 17px;
+    }
+
+    .user__name {
+      font-size: 18px;
     }
   }
 
   &--small {
-
     .user__img {
       width: 32px;
       height: 32px;
     }
-
   }
 }

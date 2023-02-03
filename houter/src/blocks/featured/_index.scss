@@ -227,12 +227,13 @@
     position: absolute;
     bottom: 16px;
     left: 16px;
+    letter-spacing: 1px;
 
     &::after {
       display: block;
       position: relative;
       border-radius: 32px;
-      padding: 10px 10px 10px 42px;
+      padding: 10px 15px 10px 42px;
       background: center left 20px /12px no-repeat;
     }
 
@@ -259,7 +260,7 @@
   }
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 148px;
+    margin-bottom: 145px;
   }
 
 }
