@@ -21,9 +21,9 @@
   }
 
   &__name {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.6;
     color: var(--neutral-700);
   }
 
@@ -35,14 +35,17 @@
   }
 
   &--big {
+
     .user__img {
       width: 56px;
       height: 56px;
       margin-right: 24px;
     }
+
     .user__name {
       line-height: 1.6;
     }
+
     .user__info {
       font-size: 16px;
     }
@@ -56,9 +59,6 @@
   }
 
   &--small {
-    .user__name {
-      font-size: 14px;
-    }
 
     .user__img {
       width: 32px;
