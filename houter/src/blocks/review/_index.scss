@@ -49,15 +49,19 @@
     box-shadow: 0 9px 32px rgba(89, 92, 219, 0.05);
 
     @media (min-width: $screen-sm) {
-      max-width: 612px;
       margin: 0 auto;
     }
 
     @media (min-width: $screen-md) {
+      max-width: 590px;
       position: relative;
       z-index: 1;
       margin-top: -159px;
       padding: 32px;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: 612px;
     }
   }
 
