@@ -10,7 +10,8 @@ $(document).ready(function () {
         $body.addClass('body--no-scroll');
     });
 
-    $btnClose.click(function () {
+    $btnClose.click(function (e) {
+        e.preventDefault();
         hideModal();
     });
 
