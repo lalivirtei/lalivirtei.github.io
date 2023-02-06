@@ -46,6 +46,7 @@
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--neutral-100);
+  line-height: normal;
 }
 
 .select2-dropdown {
@@ -87,15 +88,7 @@
 }
 
 .select2-container .select2-selection--single {
-  @media (min-width: $screen-md) {
-    height: unset;
-  }
-}
-
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  @media (min-width: $screen-md) {
-    line-height: normal;
-  }
+  height: unset;
 }
 
 .select2-container--default .select2-results>.select2-results__options {

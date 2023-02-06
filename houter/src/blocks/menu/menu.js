@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 
     function toggleMenu() {
-        if (window.matchMedia('max-width: 767px').matches) {
+        if (window.matchMedia('(max-width: 767px)').matches) {
             $menu.toggleClass('menu--open');
             $body.toggleClass('body--no-scroll');
         }
