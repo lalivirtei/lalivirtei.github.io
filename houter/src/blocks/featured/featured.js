@@ -28,9 +28,9 @@ $(document).ready(function() {
             let buttonType = $(this).data('type');
 
             $('.featured__item').each(function() {
-                $(this).css('display', 'block');
-
-                if ($(this).data('type') !== buttonType) {
+                if ($(this).data('type').includes(buttonType)) {
+                    $(this).css('display', 'block');
+                } else {
                     $(this).css('display', 'none');
                 }
             })

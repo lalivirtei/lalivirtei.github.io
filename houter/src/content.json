@@ -15,7 +15,7 @@
     {
       "img": "house-3.jpg",
       "tag": "new",
-      "type": "villa",
+      "type": "house villa",
       "name": "Woodlandside",
       "price": "20.000.000",
       "owner": {
@@ -27,7 +27,7 @@
     {
       "img": "house-4.jpg",
       "tag": "best",
-      "type": "apartment",
+      "type": "house apartment",
       "name": "The Old Lighthouse",
       "price": "44.000.000",
       "owner": {
