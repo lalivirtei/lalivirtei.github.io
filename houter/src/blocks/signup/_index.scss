@@ -6,7 +6,6 @@
   left: 0;
   width: 100%;
   height: 0;
-  backdrop-filter: blur(3px);
   transition: all ease-in-out .2s;
   visibility: hidden;
 
@@ -20,6 +19,8 @@
     justify-content: center;
     padding: 150px 50px;
     border-radius: 32px;
+    font-size: 18px;
+    color: var(--white);
     transform: translate(-50%, -50%);
     background: rgb(34, 193, 195);
     background: linear-gradient(145deg, var(--logo-orange) 0, var(--logo-green) 100%);
@@ -63,6 +64,7 @@
   &--open {
     height: 100%;
     visibility: visible;
+    backdrop-filter: blur(3px);
 
     .signup__container {
       opacity: 1;
