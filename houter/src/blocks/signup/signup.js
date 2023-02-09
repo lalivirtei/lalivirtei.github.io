@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 $(document).ready(function () {
     const $signup = $('.signup');
-    const $btnClose = $('.signup__button--close');
+    let $signupContainer = $('.signup__container');
     let $body = $('.body');
 
     $('.btn--signup').click(function () {
@@ -10,7 +10,7 @@ $(document).ready(function () {
         $body.addClass('body--no-scroll');
     });
 
-    $btnClose.click(function (e) {
+    $('.signup__button--close').click(function (e) {
         e.preventDefault();
         hideModal();
     });
@@ -30,12 +30,19 @@ $(document).ready(function () {
         e.preventDefault();
         $.post(
             'https://formbold.com/s/oJprW',
-            $('.signup').serialize(),
+            $signup.serialize(),
             function (msg) {
-                $('.signup__container').text(msg.message);
-                setTimeout(function() {
+                if (msg.message === 'Submission successful') {
+                    $signupContainer.empty();
+                    $signupContainer.append(
+                        '<div class="signup__message">' +
+                        'Almost done! Check your email for further instructions' +
+                        '</div>'
+                    );
+                }
+                setTimeout(function () {
                     hideModal();
-                }, 1000)
+                }, 2000)
             },
             'json'
         )

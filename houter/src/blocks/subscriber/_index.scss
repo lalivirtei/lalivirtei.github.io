@@ -1,4 +1,5 @@
 .subscriber {
+  box-sizing: border-box;
   background: url("img/subscriber__bg.png") center center /cover no-repeat;
   padding: 30px 15px;
 
@@ -58,6 +59,12 @@
     }
   }
 
+  &__message {
+    font-size: 24px;
+    color: var(--green-700);
+    text-align: center;
+  }
+
   @media (min-width: $screen-sm) {
     padding: 74px 0 72px;
   }
@@ -68,6 +75,7 @@
 
   @media (min-width: $screen-xl) {
     max-width: 1200px;
+    min-height: 312px;
     margin-left: auto;
     margin-right: auto;
     background-size: contain;
