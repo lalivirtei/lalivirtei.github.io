@@ -1,7 +1,8 @@
 section.articles#articles
     .articles__outline.outline.outline--top See tips and trick from our partnership
     h2.h2.articles__h2 Find out more about selling and buying homes
-    button.btn.btn--action.articles__btn More Artikel
+    .articles__btn
+        a.btn.btn--action.articles__btn-link(href="./articles.html" title="Go to articles page") More Artikel
     ul.articles__list
         each item in articles
             li(class="articles__item articles__item--"+item.mod)

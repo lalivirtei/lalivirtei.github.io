@@ -26,7 +26,7 @@ function browserSync() {
 }
 
 function layout() {
-    return src('src/index.pug')
+    return src(['src/index.pug', 'src/placeholder.pug'])
         .pipe(data(() => content))
         .pipe(pug())
         .pipe(dest('build'))
