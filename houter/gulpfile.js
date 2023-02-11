@@ -102,7 +102,17 @@ function scripts() {
 function images() {
     return src('src/**/img/*')
         .pipe(changed('build/img'))
-        .pipe(imagemin())
+        .pipe(imagemin([
+            imagemin.svgo({
+                // plugins disabled to prevent svgo from empty svg sprite
+                plugins: [
+                    {
+                        cleanupIDs: false,
+                        removeUselessDefs: false
+                    }
+                ]
+            })
+        ]))
         .pipe(flatten({subPath: [1, 0]}))
         .pipe(dest('build/img'))
         .pipe(bs.stream());
