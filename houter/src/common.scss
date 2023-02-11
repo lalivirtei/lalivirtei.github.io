@@ -90,6 +90,11 @@ $screen-xl: 1220px;
     padding: 13px 16px;
     background: var(--green-500);
     color: var(--white);
+
+    &:hover {
+      color: var(--green-100);
+      background-color: var(--green-700);
+    }
   }
 
   &--signup {
@@ -117,6 +122,10 @@ $screen-xl: 1220px;
       background: var(--green-100);
     }
   }
+}
+
+*:focus {
+  outline: var(--logo-orange) solid 2px;
 }
 
 .outline {

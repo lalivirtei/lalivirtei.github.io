@@ -86,15 +86,17 @@
     background: var(--color-neutral);
     border-radius: 32px;
 
+    &:hover {
+      background: var(--green-100);
+    }
+
     svg path {
       fill: var(--neutral-700);
+      transition: all ease .2s;
     }
 
     &--left {
       margin-right: 16px;
-    }
-
-    &--right {
     }
 
     &--active {
@@ -102,6 +104,12 @@
 
       svg path {
         fill: var(--color-bright);
+      }
+
+      &:hover {
+        svg path {
+          fill: var(--neutral-700);
+        }
       }
     }
   }
@@ -112,6 +120,10 @@
     border: 1px solid var(--color-neutral);
     color: var(--neutral-500);
     padding: 12px 14px 12px 46px;
+
+    &:hover {
+      background: var(--green-100);
+    }
 
     &:not(:last-child) {
       margin-right: 5px;
@@ -126,6 +138,10 @@
       color: var(--green-500);
       background: var(--green-100);
       border-color: var(--green-100);
+
+      &:hover {
+        background: var(--green-100);
+      }
 
       svg path {
         fill: var(--green-500);

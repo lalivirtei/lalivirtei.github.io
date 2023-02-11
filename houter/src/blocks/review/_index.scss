@@ -21,6 +21,7 @@
   &__slider-item {
     width: 80%;
     margin-bottom: 60px;
+    cursor: grab;
 
     @media (min-width: $screen-md) {
       max-width: 740px;

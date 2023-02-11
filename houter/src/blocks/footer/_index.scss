@@ -61,6 +61,12 @@
   &__social-item {
     display: block;
     margin-right: 24px;
+    border-radius: 8px;
+    transition: transform .1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__title {
@@ -80,9 +86,15 @@
     line-height: 18px;
     text-transform: capitalize;
     color: var(--neutral-500);
+    border-radius: 8px;
+    transition: color .1s ease-in-out;
 
     &:not(:last-child) {
       margin-bottom: 18px;
+    }
+
+    &:hover {
+      color: var(--neutral-700);
     }
 
     @media (min-width: $screen-lg) {

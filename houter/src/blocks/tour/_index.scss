@@ -160,6 +160,12 @@
     background-size: 48px, cover, cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-size ease .1s;
+    
+    &:hover {
+      background-size: 56px, cover, cover;
+    }
 
     @media (min-width: $screen-sm) {
       width: 488px;
@@ -213,7 +219,13 @@
     border-radius: 4px;
     overflow: hidden;
     object-fit: cover;
+    cursor: pointer;
+    transition: filter ease .2s;
 
+    &:hover {
+      filter: contrast(150%);
+    }
+    
     @media (min-width: $screen-sm) {
       width: 96px;
       height: 80px;

@@ -4,10 +4,6 @@
   &:hover {
     transform: scale(1.1);
   }
-
-  &:active {
-    transform: scale(1.3);
-  }
 }
 
 .select2-selection__rendered {
@@ -33,6 +29,7 @@
   background: none;
   border: none;
   width: 100%;
+  border-radius: 32px;
 }
 
 .selection {
@@ -64,6 +61,7 @@
 .select2-container--open .select2-dropdown--below {
   border: 1px solid hsla(0, 0%, 100%, .3);
   border-radius: 15px;
+  transition: all ease .3s;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
