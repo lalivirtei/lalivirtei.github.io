@@ -75,11 +75,10 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  //todo css arrow maybe?
-  background: transparent url("./img/sprite.svg#select2__arrow") center center /contain no-repeat;
+  background: transparent url("./img/sprite.svg#shape-apis-view") 0 0 /11px 6px no-repeat;
   border: none;
-  width: 10px;
-  height: 5px;
+  width: 11px;
+  height: 6px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
