@@ -86,7 +86,7 @@ function scripts() {
             }
 
         }, webpack).on('error', () => this.emit('end')))
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('script.min.js'))
         .pipe(sourcemaps.write())
         .pipe(dest('../build'))
         .pipe(bs.stream())
