@@ -111,10 +111,12 @@ function images() {
 }
 
 function watcher() {
-    watch("**/*.scss", {usePolling: true}, styles);
-    watch("**/*.js", {usePolling: true}, scripts);
+    watch("blocks/**/*.scss", {usePolling: true}, styles);
+    watch("main.scss", {usePolling: true}, styles);
+    watch("script.js", {usePolling: true}, scripts);
     watch("img/*", {usePolling: true}, images);
-    watch("**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
+    watch("blocks/**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
+    watch("index.pug", {usePolling: true}, layout).on('change', bs.reload);
 }
 
 exports.layout = layout;
