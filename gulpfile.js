@@ -16,7 +16,7 @@ const sourcemaps = require('gulp-sourcemaps');
 function browserSync() {
     bs.init({
         server: {
-            baseDir: '../',
+            baseDir: 'docs',
         },
         notify: false
     });
@@ -25,7 +25,7 @@ function browserSync() {
 function layout() {
     return src('source/index.pug')
         .pipe(pug())
-        .pipe(dest('../'))
+        .pipe(dest('docs'))
         .pipe(bs.stream())
 }
 
@@ -111,16 +111,14 @@ function images() {
 }
 
 function watcher() {
-    watch("source/blocks/**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
     watch("source/index.pug", {usePolling: true}, layout).on('change', bs.reload);
-    watch("source/blocks/**/*.scss", {usePolling: true}, styles);
     watch("source/main.scss", {usePolling: true}, styles);
     watch("source/script.js", {usePolling: true}, scripts);
     watch("source/images/*", {usePolling: true}, images);
 }
 
 function moveAssets() {
-    return src('favicon/*')
+    return src('source/favicon/*')
         .pipe(dest('docs'));
 }
 
