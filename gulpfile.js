@@ -23,7 +23,7 @@ function browserSync() {
 }
 
 function layout() {
-    return src(['index.pug'])
+    return src('source/index.pug')
         .pipe(pug())
         .pipe(dest('../'))
         .pipe(bs.stream())
@@ -31,7 +31,7 @@ function layout() {
 
 function styles() {
     // noinspection JSCheckFunctionSignatures
-    return src('main.scss')
+    return src('source/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postCSS([
@@ -46,12 +46,12 @@ function styles() {
             })
         ]))
         .pipe(sourcemaps.write())
-        .pipe(dest('../build'))
+        .pipe(dest('public'))
         .pipe(bs.stream())
 }
 
 function scripts() {
-    return src('script.js')
+    return src('source/script.js')
         .pipe(sourcemaps.init())
         .pipe(webpackStream({
             mode: 'production',
@@ -88,13 +88,13 @@ function scripts() {
         }, webpack).on('error', () => this.emit('end')))
         .pipe(concat('script.min.js'))
         .pipe(sourcemaps.write())
-        .pipe(dest('../build'))
+        .pipe(dest('public'))
         .pipe(bs.stream())
 }
 
 function images() {
-    return src('images/*')
-        .pipe(changed('../build/images'))
+    return src('source/images/*')
+        // .pipe(changed('source/images'))
         .pipe(imagemin([
             imagemin.svgo({
                 // plugins disabled to prevent svgo from empty svg sprite
@@ -106,24 +106,29 @@ function images() {
                 ]
             })
         ]))
-        .pipe(dest('../build/images'))
+        .pipe(dest('public/images'))
         .pipe(bs.stream());
 }
 
 function watcher() {
-    watch("blocks/**/*.scss", {usePolling: true}, styles);
-    watch("main.scss", {usePolling: true}, styles);
-    watch("script.js", {usePolling: true}, scripts);
-    watch("img/*", {usePolling: true}, images);
-    watch("blocks/**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
-    watch("index.pug", {usePolling: true}, layout).on('change', bs.reload);
+    watch("source/blocks/**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
+    watch("source/index.pug", {usePolling: true}, layout).on('change', bs.reload);
+    watch("source/blocks/**/*.scss", {usePolling: true}, styles);
+    watch("source/main.scss", {usePolling: true}, styles);
+    watch("source/script.js", {usePolling: true}, scripts);
+    watch("source/images/*", {usePolling: true}, images);
+}
+
+function moveAssets() {
+    return src('favicon/*')
+        .pipe(dest('public'));
 }
 
 exports.layout = layout;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
-exports.build = parallel(layout, styles, scripts, images);
+exports.build = parallel(layout, styles, scripts, images, moveAssets);
 
 exports.browserSync = browserSync;
 exports.watcher = watcher;
