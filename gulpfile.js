@@ -10,7 +10,7 @@ const webpackStream = require('webpack-stream');
 const concat = require('gulp-concat');
 const TerserPlugin = require('terser-webpack-plugin');
 const imagemin = require('gulp-imagemin');
-const changed = require('gulp-changed');
+// const changed = require('gulp-changed');
 const sourcemaps = require('gulp-sourcemaps');
 
 function browserSync() {
@@ -46,7 +46,7 @@ function styles() {
             })
         ]))
         .pipe(sourcemaps.write())
-        .pipe(dest('public'))
+        .pipe(dest('docs'))
         .pipe(bs.stream())
 }
 
@@ -88,7 +88,7 @@ function scripts() {
         }, webpack).on('error', () => this.emit('end')))
         .pipe(concat('script.min.js'))
         .pipe(sourcemaps.write())
-        .pipe(dest('public'))
+        .pipe(dest('docs'))
         .pipe(bs.stream())
 }
 
@@ -106,7 +106,7 @@ function images() {
                 ]
             })
         ]))
-        .pipe(dest('public/images'))
+        .pipe(dest('docs/images'))
         .pipe(bs.stream());
 }
 
@@ -121,7 +121,7 @@ function watcher() {
 
 function moveAssets() {
     return src('favicon/*')
-        .pipe(dest('public'));
+        .pipe(dest('docs'));
 }
 
 exports.layout = layout;
