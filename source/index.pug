@@ -3,7 +3,7 @@ head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    title Lalivirtei
+    title Денис Каракчиев
     link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
@@ -15,7 +15,12 @@ head
 
 body
     header
-        h1 Lalivirtei's portfolio
+        picture
+            source(srcset="images/avatar.webp")
+            img(src="images/avatar.jpg" alt="Фото на фоне Школы 21")
+        h1 Денис Каракчиев
+        h2 Портфолио
+
     main
         include blocks/portfolio-item/index
     footer
