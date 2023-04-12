@@ -4,8 +4,10 @@
   --dark-900: #35363a;
 }
 
+$screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
+$screen-xl: 1200px;
 
 body {
   background: var(--dark-900);
@@ -30,37 +32,43 @@ h1 {
 .items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+
+  @media (max-width: $screen-sm) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    justify-items: center;
+  }
 }
 
 .item {
   display: block;
-  text-decoration: none;
-  position: relative;
   width: 250px;
   height: 350px;
+
+  text-decoration: none;
+  position: relative;
+
   border-radius: 15px;
   overflow: hidden;
-
-  transform:
-          perspective(800px)
-          rotateY(25deg) scale(0.9)
-          rotateX(10deg);
-  filter: blur(2px);
-  opacity: 0.5;
   transition: 0.3s ease-in-out all;
 
-  &:hover {
-    transform:
-            perspective(800px)
-            rotateY(-15deg)
-            translateY(-50px)
-            rotateX(10deg)
-            scale(1);
-    filter: blur(0);
-    opacity: 1;
-    box-shadow: 15px 15px 15px 15px #262626;
+  @media (min-width: $screen-lg) {
+    width: 250px;
+    height: 350px;
 
+    transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+    filter: blur(2px);
+    opacity: 0.5;
+
+    &:hover {
+      transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+      filter: blur(0);
+      opacity: 1;
+      box-shadow: 15px 15px 15px 15px #262626;
+    }
   }
+
 
   figure {
     width: 100%;
