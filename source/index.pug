@@ -12,40 +12,50 @@ html(lang="ru")
         link(rel="mask-icon" href="safari-pinned-tab.svg" color="#666")
         meta(name="msapplication-TileColor" content="#666")
         meta(name="theme-color" content="#666")
+
         link(rel="preconnect", href="https://fonts.googleapis.com")
         link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300;400;600&display=swap", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap", rel="stylesheet")
+
         link(rel="stylesheet" href="main.css")
 
     body
         header
-            picture
-                source(srcset="images/avatar.webp")
-                img.avatar(src="images/avatar.jpg" alt="Фото на фоне Школы 21")
-            h1 Денис Каракчиев
-            h2 Примеры работ
+            .avatar__wrapper
+                picture
+                    source(srcset="images/avatar.webp")
+                    img.avatar(src="images/avatar.jpg" alt="Фото на фоне Школы 21")
+                img.avatar.avatar--anime(src="images/me_anime.jpg" alt="Аниме версия аватара")
+            .title
+                h1 Денис Каракчиев
+                h2 Примеры работ
 
         main.items
-            a.item(href="https://houter-lalivirtei.netlify.app/" target="_blank" title="Открыть демо")
-                figure
-                    picture
-                        source(type="image/webp" srcset="images/houter.webp")
-                        img(src="images/houter.jpg" alt="Главная страница сайта о недвижимости")
-                    figcaption Страница о недвижимости
+            .item__wrapper
+                a.item(href="https://houter-lalivirtei.netlify.app/" target="_blank" title="Открыть демо")
+                    figure
+                        picture
+                            source(type="image/webp" srcset="images/houter.webp")
+                            img(src="images/houter.jpg" alt="Главная страница сайта о недвижимости")
+                        figcaption Страница о недвижимости
+                a.item__code-link(href="" target="_blank") Код проекта
+            .item__wrapper
+                a.item(href="https://fitnes-lp-lalivirtei.netlify.app/" target="_blank" title="Открыть демо")
+                    figure
+                        picture
+                            source(type="image/webp" srcset="images/fitnes-lp.webp")
+                            img(src="images/fitnes-lp.jpg" alt="Лэндинг о фитнесе")
+                        figcaption Страница о фитнесе
+                a.item__code-link(href="https://github.com/lalivirtei/fitnes-lp" target="_blank") Код проекта
 
-            a.item(href="https://fitnes-lp-lalivirtei.netlify.app/" target="_blank" title="Открыть демо")
-                figure
-                    picture
-                        source(type="image/webp" srcset="images/fitnes-lp.webp")
-                        img(src="images/fitnes-lp.jpg" alt="Лэндинг о фитнесе")
-                    figcaption Страница о фитнесе
-
-            a.item(href="https://tick-tack-toe-lalivirtei.netlify.app/" target="_blank" title="Открыть демо")
-                figure
-                    picture
-                        source(type="image/webp" srcset="images/tick-tack-toe.webp")
-                        img(src="images/tick-tack-toe.jpg" alt="Крестики-нолики на React")
-                    figcaption Мини-игра на React
+            .item__wrapper
+                a.item(href="https://tick-tack-toe-lalivirtei.netlify.app/" target="_blank" title="Открыть демо")
+                    figure
+                        picture
+                            source(type="image/webp" srcset="images/tick-tack-toe.webp")
+                            img(src="images/tick-tack-toe.jpg" alt="Крестики-нолики на React")
+                        figcaption Мини-игра на React
+                a.item__code-link(href="https://github.com/lalivirtei/tic-tac-toe" target="_blank") Код проекта
 
         footer
 
